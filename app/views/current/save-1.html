@@ -1,0 +1,51 @@
+
+
+{% extends "layout.html" %}
+
+{% set serviceName = "" %}
+
+{% block pageTitle %}
+  GOV.UK Accounts prototype
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Save a page is an experimental new feature
+          </h1>
+
+
+      <p>
+        We want to find out:
+<ul class="govuk-list govuk-list--bullet"><li>
+if saving GOV.UK pages to an account is useful
+</li><li>
+what we can add to this feature to make it more helpful
+</li></ul>
+      </p>
+<p>We might make changes to this feature as we learn more about how people are using it.
+</p>
+
+<p>
+We might also remove it entirely if not enough people find it useful. If this happens, we will let you know in advance so you can download your list of saved pages.
+</p>
+
+{{ govukButton({
+  text: "Try out the new save a page feature",
+  href: "save-2"
+}) }}
+
+
+
+
+<p>Or <a href="/{{folder}}/sign-in">sign in</a> if you already have saved pages.</p>
+    </div>
+  </div>
+
+{% endblock %}

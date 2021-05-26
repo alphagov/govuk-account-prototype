@@ -1,0 +1,56 @@
+{% extends folder + "/_accounts.njk" %}
+
+
+{% block account %}
+
+{% if data['success']  %}
+
+{% set html %}
+  <h3 class="govuk-notification-banner__heading">
+{% if data['success'] == "removed" %}
+You’ve removed ‘Jury service’ from your saved pages
+{% else %}
+    You’ve added ‘Jury service’ to your saved pages
+{% endif %}
+
+  </h3>
+  {% if data['success'] == "removed" %}
+  <p class="govuk-body">
+    <a class="govuk-notification-banner__link" href="{{current}}?success=added&saved=true">Add it to your saved pages again </a></p>
+{% endif %}
+{% endset %}
+
+{{ govukNotificationBanner({
+  html: html,
+  type: 'success'
+}) }}
+
+{% endif %}
+
+
+
+<h1 class="gem-c-heading govuk-heading-l   govuk-!-margin-bottom-4">Your saved pages</h1>
+
+{% if data['saved'] %}
+<ul class="govuk-list govuk-list--spaced accounts-border-list">
+      <li class="accounts-border-list__item">
+
+
+  <h3 class="gem-c-heading govuk-heading-m  govuk-!-margin-bottom-2"><a href="/{{folder}}/jury-service/index">Jury service</a></h3>
+
+
+  <p class="govuk-body govuk-!-margin-bottom-2">
+      Saved on 1 June 2021.
+  </p>
+  <p><a href="{{current}}?saved=&success=removed">Remove from your saved pages</a></p>
+</li>
+
+  </ul>
+{% else %}
+<p>You do not have any saved pages yet.</p>
+
+<p>Use the ‘save a page’ button on any GOV.UK page to add it to your list of saved pages.</p>
+
+{% endif %}
+
+  {% endblock %}

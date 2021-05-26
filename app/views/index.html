@@ -1,0 +1,84 @@
+
+
+{% extends "layout.html" %}
+
+{% block header %}
+
+
+
+{{ govukHeader({
+  homepageUrl: "#",
+  productName: "Accounts",
+  serviceUrl: "#",
+  navigation: [
+    {
+      href: "#1",
+      text: "Account",
+      active: true
+    },
+    {
+      href: "#2",
+      text: "Sign out"
+    }]
+}) }}
+
+
+{% endblock %}
+
+{% block pageTitle %}
+  GOV.UK Accounts prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full-width">
+      <h1 class="govuk-heading-xl">
+        The GOV.UK Prototype Kit
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+      <p>
+        This kit lets you rapidly create HTML prototypes of GOV.UK services.
+      </p>
+
+      {{ govukTable({
+             caption: "Version history for current team",
+             captionClasses: "govuk-heading-m",
+             firstCellIsHeader: true,
+             head: [
+               {
+                 text: "Version"
+               },
+               {
+                 text: "Date added"
+               },
+               {
+                 text: "Description"
+               },
+               {
+                 text: "Link"
+               }
+             ],
+             rows: [
+             [
+             {
+               text: "Round 1 of research (current)"
+             },
+             {
+               text: "28 May 2021"
+             },
+             {
+               text: "First journey"
+             },
+             {
+               html: '<a href="/current/index">Go to round 1 of research (current)</a>'
+             }
+             ]
+       ]
+     }) }}
+
+
+    </div>
+  </div>
+
+{% endblock %}

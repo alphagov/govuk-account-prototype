@@ -1,0 +1,67 @@
+{% extends folder + "/_accounts.njk" %}
+
+
+{% block account %}
+
+<!--
+<section class="user-reminder govuk-!-margin-bottom-4" aria-label="Notice" role="region">
+    <p class="govuk-body govuk-!-margin-0">
+      <strong>Confirm your email address</strong> to finish setting up your account and email alerts.
+      <a href="/account/confirmation/new" class="govuk-link">Resend confirmation email</a>
+    </p>
+  </section>
+-->
+  <section class="user-reminder" aria-label="Notice" role="region">
+    <p class="govuk-body govuk-!-margin-0">
+      <p style="margin-bottom: 0"><strong>Add your mobile phone number</strong> to keep your personal information secure. <a href="">Add mobile phone number.</a>
+    </p>
+  </section>
+
+<h1 class="gem-c-heading govuk-heading-l   govuk-!-margin-bottom-4">Your GOV.UK account</h1>
+<p>{{ data['email'] | default("test.user@gmail.com") }}</p>
+
+<h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Features you are using</h2>
+
+
+<div class="accounts-panel govuk-!-margin-bottom-4">
+    <h3 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Your saved pages</h3>
+
+
+    <p class="govuk-body">See and manage the list of GOV.UK pages you’ve saved.</p>
+
+    <p class="govuk-body govuk-!-margin-0">
+      <a href="#" class="govuk-link">Go to your saved pages</a>
+    </p>
+    </div>
+<h2 class="gem-c-heading govuk-heading-m govuk-!-margin-top-4 ">Features you have not used</h2>
+
+
+
+
+
+    <div class="accounts-panel govuk-!-margin-bottom-4">
+        <h3 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Email updates</h3>
+
+
+        <p class="govuk-body">You have not subscribed to GOV.UK email updates.</p>
+
+        <p class="govuk-body govuk-!-margin-0">
+          <a href="#" class="govuk-link">Set up your GOV.UK email updates</a>
+        </p>
+        </div>
+
+        <div class="accounts-panel govuk-!-margin-bottom-4">
+            <h3 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Brexit checker results</h3>
+
+
+            <p class="govuk-body">You have not saved the list of Brexit actions for you, your business and your family.</p>
+
+            <p class="govuk-body govuk-!-margin-0">
+              <a href="#" class="govuk-link">Go through the Brexit checker to get your list of actions</a>
+            </p>
+            </div>
+
+<br>
+<br>
+
+  {% endblock %}
