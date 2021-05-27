@@ -33,7 +33,9 @@
       {% endif %}
 
               </h3>
-              <p class="govuk-body"><a class="govuk-notification-banner__link" href="/{{folder}}/account-future/index?success=">See your saved pages</a></p>
+              <p class="govuk-body"><a class="govuk-notification-banner__link" href="/{{folder}}/account-future/index?success=">
+                Go to your account to see your saved pages
+              </a></p>
             {% endset %}
 
             {{ govukNotificationBanner({
@@ -1434,37 +1436,40 @@
 
 
 
-  <div class="accounts-panel">
-      <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">
-  {% if data['saved-travel'] %}
-  You’ve saved this page
-  {% else %}
-        Save this page so you can come back to it later
-  {% endif %}
-      </h2>
-
-      <a href="{% if data['saved-travel']%}{{current}}?success=removed&saved-travel={% else %}{{current}}?success=added&saved-travel=true{% endif %}" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        {% if data['saved-travel']%}Remove from{% else %}Add to{% endif %} your saved pages
-      </a>
-
-
-
-      <p class="govuk-body govuk-!-margin-0">
-
-    <a href="/{{folder}}/account-future/index?success=">See your saved pages</a>
-
-      </p>
-      </div>
-
-
     </div>
-
 
 
 
   <div class="govuk-grid-column-one-third">
 
   <div class="gem-c-contextual-sidebar">
+
+    <!-- SAVE BLOCK -->
+
+      <div class="accounts-panel">
+          <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">
+      {% if data['saved-travel'] %}
+      You’ve saved this page
+      {% else %}
+            Save this page so you can come back to it later
+      {% endif %}
+          </h2>
+
+          <a href="{% if data['saved-travel']%}{{current}}?success=removed&saved-travel={% else %}{{current}}?success=added&saved-travel=true{% endif %}" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            {% if data['saved-travel']%}Remove from{% else %}Add to{% endif %} your saved pages
+          </a>
+
+
+
+          <p class="govuk-body govuk-!-margin-0">
+
+        <a href="/{{folder}}/account-future/index?success=">Go to your account to see your saved pages</a>
+
+          </p>
+          </div>
+
+          <!-- END SAVE BLOCK -->
+
         <div class="gem-c-step-nav-related gem-c-step-nav-related--singular" data-module="gem-track-click">
       <h2 class="gem-c-step-nav-related__heading">
         <span class="gem-c-step-nav-related__pretitle">Part of</span>

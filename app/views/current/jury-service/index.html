@@ -12,6 +12,19 @@
 
 
 
+  {% set pageArray = [
+    { title: "How jury service works", url: "index" },
+    { title: "What you can claim if you’re an employee", url: "what-you-can-claim-if-youre-an-employee"},
+    { title: "What you can claim if you’re self-employed", url: "what-you-can-claim-if-youre-self-employed"},
+    { title: "What you can claim if you're not working", url: "what-you-can-claim-if-youre-not-working"},
+    { title: "Ask to change the date or be excused", url: "delaying-or-being-excused-from-jury-service"},
+    { title: "Respond to the summons", url: "respond-to-the-summons"},
+    { title: "Going to court as a juror", url: "what-to-take-to-court"},
+    { title: "Discussing the trial", url: "discussing-the-trial"},
+    { title: "bar", url: ""}
+  ]
+%}
+
 {% endblock %}
 
 {% block main %}
@@ -50,11 +63,11 @@
     <div class="govuk-width-container {{ containerClasses }}  " >
       {% block beforeContent %}
 
-      <br><br>
+
 
       <!-- we're being a bit hacky in showing one-time alerts - we might be able to do this with javascript? -->
             {% if data['success']  %}
-
+<br><br>
             {% set html %}
               <h3 class="govuk-notification-banner__heading">
       {% if data['success'] == "removed" %}
@@ -64,7 +77,8 @@
       {% endif %}
 
               </h3>
-              <p class="govuk-body"><a class="govuk-notification-banner__link" href="/{{folder}}/account/index?success=">See your saved pages</a></p>
+              <p class="govuk-body"><a class="govuk-notification-banner__link" href="/{{folder}}/account/index?success=">
+                Go to your account to see your saved pages</a></p>
             {% endset %}
 
             {{ govukNotificationBanner({
@@ -274,30 +288,6 @@
 </ul>
 </nav>
 
-<div class="accounts-panel">
-    <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">
-{% if data['saved'] %}
-You’ve saved this page
-{% else %}
-      Save this page so you can come back to it later
-{% endif %}
-    </h2>
-
-    <a href="{% if data['saved']%}{{current}}?success=removed&saved={% elseif data['signed-in'] %}{{current}}?success=added&saved=true{% else %}/current/save-1{%endif %}" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-      {% if data['saved']%}Remove from{% else %}Add to{% endif %} your saved pages
-    </a>
-
-
-
-    <p class="govuk-body govuk-!-margin-0">
-    {% if data['signed-in'] %}
-  <a href="/{{folder}}/account/index?">See your saved pages</a>
-    {% else %}
-      <a href="/{{folder}}/sign-in" class="govuk-link">Sign in</a> to see your saved pages
-    {% endif %}
-    </p>
-    </div>
-
 
 
 
@@ -314,6 +304,33 @@ You’ve saved this page
 <div class="govuk-grid-column-one-third">
 
 <div class="gem-c-contextual-sidebar">
+
+
+  <!-- ACCOUNTS PANEL -->
+  <div class="accounts-panel">
+      <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">
+  {% if data['saved'] %}
+  You’ve saved this page
+  {% else %}
+        Save this page so you can come back to it later
+  {% endif %}
+      </h2>
+
+      <a href="{% if data['saved']%}{{current}}?success=removed&saved={% elseif data['signed-in'] %}{{current}}?success=added&saved=true{% else %}/current/save-1{%endif %}" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        {% if data['saved']%}Remove from{% else %}Add to{% endif %} your saved pages
+      </a>
+
+
+
+      <p class="govuk-body govuk-!-margin-0">
+      {% if data['signed-in'] %}
+    <a href="/{{folder}}/account/index?">See your saved pages</a>
+      {% else %}
+        <a href="/{{folder}}/sign-in" class="govuk-link">Sign in</a> to see your saved pages
+      {% endif %}
+      </p>
+      </div>
+  <!-- END ACCOUNT -->
 
 
   <div class="gem-c-related-navigation">
