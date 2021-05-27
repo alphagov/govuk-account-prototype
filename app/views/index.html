@@ -2,28 +2,7 @@
 
 {% extends "layout.html" %}
 
-{% block header %}
-
-
-
-{{ govukHeader({
-  homepageUrl: "#",
-  productName: "Accounts",
-  serviceUrl: "#",
-  navigation: [
-    {
-      href: "#1",
-      text: "Account",
-      active: true
-    },
-    {
-      href: "#2",
-      text: "Sign out"
-    }]
-}) }}
-
-
-{% endblock %}
+{% set serviceName = "Usability testing" %}
 
 {% block pageTitle %}
   GOV.UK Accounts prototype
