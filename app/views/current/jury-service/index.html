@@ -48,7 +48,33 @@
     </div>
 -->
     <div class="govuk-width-container {{ containerClasses }}  " >
-      {% block beforeContent %}{% endblock %}
+      {% block beforeContent %}
+
+      <br><br>
+
+      <!-- we're being a bit hacky in showing one-time alerts - we might be able to do this with javascript? -->
+            {% if data['success']  %}
+
+            {% set html %}
+              <h3 class="govuk-notification-banner__heading">
+      {% if data['success'] == "removed" %}
+      You’ve removed this from your saved pages
+      {% else %}
+                You’ve added this to your saved pages
+      {% endif %}
+
+              </h3>
+              <p class="govuk-body"><a class="govuk-notification-banner__link" href="/{{folder}}/account/index?success=">See your saved pages</a></p>
+            {% endset %}
+
+            {{ govukNotificationBanner({
+              html: html,
+              type: 'success'
+            }) }}
+
+            {% endif %}
+
+      {% endblock %}
       <main class="govuk-main-wrapper {{ mainClasses }} guide" style="padding-top: 0" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
         {% block content %}
 
@@ -76,28 +102,6 @@
     <div class="gem-c-title govuk-!-margin-top-8 govuk-!-margin-bottom-8">
 
 
-
-<!-- we're being a bit hacky in showing one-time alerts - we might be able to do this with javascript? -->
-      {% if data['success']  %}
-
-      {% set html %}
-        <h3 class="govuk-notification-banner__heading">
-{% if data['success'] == "removed" %}
-You’ve removed this from your saved pages
-{% else %}
-          You’ve added this to your saved pages
-{% endif %}
-
-        </h3>
-        <p class="govuk-body"><a class="govuk-notification-banner__link" href="/{{folder}}/account/index?success=">See your saved pages</a></p>
-      {% endset %}
-
-      {{ govukNotificationBanner({
-        html: html,
-        type: 'success'
-      }) }}
-
-      {% endif %}
 
 
   <h1 class="gem-c-title__text govuk-heading-xl">

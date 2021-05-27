@@ -655,3 +655,268 @@ $govuk-assets-path: '/govuk/assets/';
     font-size: 19px;
     line-height: 1.3157894737;
 }}
+
+
+
+
+.gem-c-step-nav-header {
+    color: #0b0c0c;
+    position: relative;
+    padding: 10px;
+    background: #f3f2f1;
+    border-bottom: solid 1px #1d70b8;
+    margin-top: 15px;
+}
+
+@media (min-width: 40.0625em){
+.gem-c-step-nav-header {
+    padding: 25px;
+}}
+
+
+
+
+
+.gem-c-lead-paragraph {
+    color: #0b0c0c;
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.1111111111;
+    margin-top: 0;
+    margin-bottom: 15px;
+    max-width: 30em;
+}
+
+@media (min-width: 40.0625em){
+.gem-c-lead-paragraph {
+    font-size: 24px;
+    line-height: 1.25;
+}}
+
+@media (min-width: 40.0625em){
+.gem-c-lead-paragraph {
+    margin-bottom: 45px;
+}}
+
+
+
+
+
+
+.app-c-important-metadata {
+    background: #1d70b8;
+    color: #fff;
+    padding: 15px;
+}
+
+@media (min-width: 40.0625em){
+.app-c-important-metadata {
+    overflow: auto;
+    padding: 20px 30px;
+}}
+
+.app-c-important-metadata--bottom-margin {
+    margin-bottom: 15px;
+}
+
+@media (min-width: 40.0625em){
+.app-c-important-metadata--bottom-margin {
+    margin-bottom: 50px;
+}}
+
+.app-c-important-metadata__definition {
+    font-weight: bold;
+}
+
+.app-c-important-metadata__definition .app-link {
+    color: #fff;
+}
+
+.app-c-important-metadata__term {
+    float: left;
+    padding-right: 5px;
+}
+
+.gem-c-metadata {
+    color: #0b0c0c;
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.1428571429;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 40.0625em){
+.gem-c-metadata {
+    font-size: 16px;
+    line-height: 1.25;
+}}
+
+@media (min-width: 40.0625em) {
+.gem-c-metadata {
+    margin-bottom: 45px;
+}}
+
+.gem-c-metadata__term {
+    margin-top: .5em;
+}
+.gem-c-metadata__term, .gem-c-metadata__definition {
+    line-height: 1.4;
+}
+
+@media (min-width: 40.0625em) {
+.gem-c-metadata__term {
+    box-sizing: border-box;
+    float: left;
+    clear: left;
+    padding-right: 5px;
+    margin-top: 0;
+}}
+
+.detailed-guide , .govuk-govspeak td, .govuk-govspeak th, .govuk-govspeak h2, .govuk-govspeak h3, body .govuk-govspeak, .govuk-govspeak li, .govuk-govspeak li time  {
+    font-family: "nta", Arial, sans-serif;
+}
+
+.detailed-guide dl, .detailed-guide dd  {
+  display: block;
+
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+    border: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+// table
+
+
+
+
+.govspeak table, .gem-c-govspeak table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: block;
+    margin: 30px 0;
+    overflow-x: auto;
+    width: 100%;
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.25;
+}
+
+@media (min-width: 40.0625em){
+.govspeak table, .gem-c-govspeak table {
+    font-size: 14px;
+    line-height: 1.4285714286;
+}}
+
+
+
+
+.govspeak table th, .govspeak table td, .gem-c-govspeak table th, .gem-c-govspeak table td {
+    vertical-align: top;
+    padding: 10px 10px 10px 0;
+    border-bottom: solid 1px #b1b4b6;
+}
+
+.govspeak table th, .gem-c-govspeak table th {
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.25;
+    text-align: left;
+    color: #0b0c0c;
+}
+
+@media (min-width: 40.0625em){
+.govspeak table th, .gem-c-govspeak table th {
+    font-size: 14px;
+    line-height: 1.4285714286;
+}}
+
+
+// lists
+
+
+
+.govspeak ol, .govspeak ul, .govspeak p, .gem-c-govspeak ol, .gem-c-govspeak ul, .gem-c-govspeak p {
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 40.0625em){
+.govspeak ol, .govspeak ul, .govspeak p, .gem-c-govspeak ol, .gem-c-govspeak ul, .gem-c-govspeak p {
+    font-size: 19px;
+    line-height: 1.3157894737;
+}}
+
+
+.govspeak li, .gem-c-govspeak li {
+    margin: 0 0 5px;
+    padding: 0;
+}
+
+.app-c-published-dates__toggle {
+    display: inline-block;
+}
+
+//
+
+
+
+
+.responsive-bottom-margin {
+    margin-bottom: 15px;
+}
+
+@media (min-width: 40.0625em){
+.responsive-bottom-margin {
+    margin-bottom: 50px;
+}}
+
+// print
+
+.gem-c-print-link {
+    display: block;
+}
+
+.app-c-contents-list-with-body__link-wrapper {
+    padding-bottom: 10px;
+}
+
+//step by step
+.gem-c-step-nav__title {
+    color: #0b0c0c;
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0;
+}
+
+@media (min-width: 40.0625em){
+.gem-c-step-nav__title {
+    font-size: 19px;
+    line-height: 1.4;
+}}
