@@ -88,8 +88,6 @@ $govuk-assets-path: '/govuk/assets/';
 
 
 
-
-
 .gem-c-show-password__toggle {
     font-family: "GDS Transport",arial,sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -343,6 +341,14 @@ $govuk-assets-path: '/govuk/assets/';
     background: url(/public/images/icon-print.png) no-repeat 10px 50%;
     background-size: 16px 18px;
     padding: 10px 10px 10px 36px;
+
+}
+
+.gem-c-print-link__button {
+    border: 1px solid #b1b4b6;
+    color: #1d70b8;
+    cursor: pointer;
+    margin: 0;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){
@@ -1305,6 +1311,30 @@ line-height: 1.2; }
 
 .gem-c-step-nav__list-item {
     margin-bottom: 10px;
+}
+
+
+
+.app-c-published-dates {
+    direction: ltr;
+    line-height: 1.45em;
+}
+
+.app-c-published-dates--history {
+  -webkit-text-size-adjust: 100%;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+font-family: "nta", Arial, sans-serif;
+color: #0b0c0c;
+font-weight: 400;
+-webkit-font-smoothing: antialiased;
+vertical-align: baseline;
+border: none;
+margin: 0;
+padding: 0;
+direction: ltr;
+line-height: 1.45em;
+padding-top: 10px;
+border-top: 1px solid #b1b4b6;
 }
 
 // hello
