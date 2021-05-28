@@ -1,6 +1,8 @@
 {% extends "layout.html" %}
 {% set serviceName = "" %}
 
+
+
 {% set pageArray = [
   { title: "How jury service works", url: "index" },
   { title: "What you can claim if you’re an employee", url: "what-you-can-claim-if-youre-an-employee"},
@@ -18,10 +20,16 @@
 
 
 {% if not guideTitle %} {% set guideTitle = "How jury service works" %}{% endif %}
+
+
+{% block pageTitle %}
+Jury service : {% for i in pageArray%}{% if loop.index == pageNumber %}{{i.title}}{% endif %}{% endfor %}
+{% endblock %}
+
 {% block header %}
   {# Set serviceName in config.js. #}
   {{ govukHeader({
-    homepageUrl: "/",
+    homepageUrl: "/" + folder + "/index?success=",
     serviceName: "",
     serviceUrl: "/",
     containerClasses: "govuk-width-container"
@@ -227,7 +235,7 @@
 
 <p>You’ll be part of a jury of 12 people to decide the outcome of a criminal trial.</p>
 
-<p>You can watch a <a rel="external" href="https://www.youtube.com/watch?v=yQGekF-72xQ&amp;t=2s">video about jury service</a>. There’s also a <a rel="external" href="https://www.youtube.com/watch?v=mtU60t6l7C8">Welsh language version of the video</a>.</p>
+<p>You can watch a <a rel="external" href="#">video about jury service</a>. There’s also a <a rel="external" href="#">Welsh language version of the video</a>.</p>
 
 <h2 id="jury-service-and-coronavirus-covid-19" class="govuk-heading-m">Jury service and coronavirus (COVID-19)</h2>
 
@@ -235,7 +243,7 @@
 
 <p>Do not go to court if you have COVID-19 symptoms or if you’re self-isolating or in quarantine. Tell the court if you cannot attend.</p>
 
-<p>You can read more about <a href="/guidance/coronavirus-covid-19-courts-and-tribunals-planning-and-preparation">how coronavirus is affecting jury service</a> including the social distancing measures that are in place.</p>
+<p>You can read more about <a href="#">how coronavirus is affecting jury service</a> including the social distancing measures that are in place.</p>
 
 <h2 id="how-long-jury-service-lasts" class="govuk-heading-m">How long jury service lasts</h2>
 
@@ -255,7 +263,7 @@
 <ul class="govuk-list govuk-list--bullet">
   <li > <a href="what-you-can-claim-if-youre-an-employee">if you’re an employee</a></li>
   <li><a href="what-you-can-claim-if-youre-self-employed">if you’re self-employed</a></li>
-  <li><a href="/jury-service/what-you-can-claim-if-youre-not-working">if you’re not working</a></li>
+  <li><a href="what-you-can-claim-if-youre-not-working">if you’re not working</a></li>
 </ul>
 
 
@@ -304,7 +312,7 @@
 
 
 <div class="gem-c-print-link gem-c-print-link--show-without-js govuk-!-margin-top-3 govuk-!-margin-bottom-3">
-    <a class="govuk-link gem-c-print-link__link govuk-link--no-visited-state" rel="alternate" data-module="button" role="button" href="/jury-service/print">Print entire guide</a>
+    <a class="govuk-link gem-c-print-link__link govuk-link--no-visited-state" rel="alternate" data-module="button" role="button" href="#">Print entire guide</a>
 </div>
   </div>
 
@@ -357,8 +365,8 @@
   <ul class="gem-c-related-navigation__link-list govuk-list" data-module="gem-track-click">
 
 
-        <li class="gem-c-related-navigation__link govuk-link govuk-body-s"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked" data-track-action="1.1 Related content" data-track-label="/courts" data-track-options="{&quot;dimension28&quot;:&quot;2&quot;,&quot;dimension29&quot;:&quot;Criminal courts&quot;}" href="/courts">Criminal courts</a></li>
-        <li class="gem-c-related-navigation__link govuk-link govuk-body-s"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked" data-track-action="1.2 Related content" data-track-label="/giving-staff-time-off-jury-service" data-track-options="{&quot;dimension28&quot;:&quot;2&quot;,&quot;dimension29&quot;:&quot;Giving staff time off for jury service&quot;}" href="/giving-staff-time-off-jury-service">Giving staff time off for jury service</a></li>
+        <li class="gem-c-related-navigation__link govuk-link govuk-body-s"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked" data-track-action="1.1 Related content" data-track-label="/courts" data-track-options="{&quot;dimension28&quot;:&quot;2&quot;,&quot;dimension29&quot;:&quot;Criminal courts&quot;}" href="#">Criminal courts</a></li>
+        <li class="gem-c-related-navigation__link govuk-link govuk-body-s"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked" data-track-action="1.2 Related content" data-track-label="/giving-staff-time-off-jury-service" data-track-options="{&quot;dimension28&quot;:&quot;2&quot;,&quot;dimension29&quot;:&quot;Giving staff time off for jury service&quot;}" href="#">Giving staff time off for jury service</a></li>
 
   </ul>
 </nav>

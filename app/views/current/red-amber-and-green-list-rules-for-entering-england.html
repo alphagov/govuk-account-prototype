@@ -4,7 +4,7 @@
 {% block header %}
   {# Set serviceName in config.js. #}
   {{ govukHeader({
-    homepageUrl: "/",
+    homepageUrl: "/" + folder + "/index?success=",
     serviceName: "",
     serviceUrl: "/",
     containerClasses: "govuk-width-container"
@@ -90,7 +90,7 @@
     <dl data-module="gem-track-click">
         <dt class="gem-c-metadata__term">From:</dt>
         <dd class="gem-c-metadata__definition">
-            <a class="govuk-link" href="/government/organisations/department-for-transport">Department for Transport</a>
+            <a class="govuk-link" href="#">Department for Transport</a>
 
         </dd>
         <dt class="gem-c-metadata__term">Published</dt>
@@ -118,7 +118,7 @@
         <div class="app-c-important-metadata app-c-important-metadata--bottom-margin">
       <dl data-module="gem-track-click">
         <dt class="app-c-important-metadata__term">Applies to: </dt>
-        <dd class="app-c-important-metadata__definition">England (see guidance for <a class="govuk-link app-link" href="https://gov.wales/rules-foreign-travel-and-wales-coronavirus-covid-19-html">Wales</a>, <a class="govuk-link app-link" href="https://www.gov.scot/publications/coronavirus-covid-19-international-travel-quarantine/pages/red-amber-and-green-list-countries/">Scotland</a>, and <a class="govuk-link app-link" href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-international-travel-advice">Northern Ireland</a>)</dd>
+        <dd class="app-c-important-metadata__definition">England (see guidance for <a class="govuk-link app-link" href="#" class="govuk-link app-link" >Northern Ireland</a>)</dd>
       </dl>
     </div>
 
@@ -178,7 +178,7 @@
   <div class="call-to-action">
   <h2 id="stay-up-to-date">Stay up-to-date</h2>
 
-  <p>Countries and territories can be moved between lists if conditions change. <a href="https://www.gov.uk/email-signup?topic=/coronavirus-taxon/entering-england" class="govuk-link">Sign up for an email alert</a> to be notified when this page is updated.</p>
+  <p>Countries and territories can be moved between lists if conditions change. <a href="#" class="govuk-link">Sign up for an email alert</a> to be notified when this page is updated.</p>
   </div>
 
   <p>What you must do when you arrive in England from abroad depends on where you have been in the 10 days before you arrive.</p>
@@ -200,9 +200,9 @@
   <p>Before you travel to England you must:</p>
 
   <ul>
-    <li><a href="https://www.gov.uk/guidance/coronavirus-covid-19-testing-for-people-travelling-to-england" class="govuk-link">take a COVID-19 test</a></li>
-    <li><a href="https://www.gov.uk/guidance/booking-and-staying-in-a-quarantine-hotel-when-you-arrive-in-england" class="govuk-link">book a quarantine hotel package, including 2 COVID-19 tests</a></li>
-    <li><a href="https://www.gov.uk/provide-journey-contact-details-before-travel-uk" class="govuk-link">complete a passenger locator form</a></li>
+    <li><a href="#" class="govuk-link">take a COVID-19 test</a></li>
+    <li><a href="#" class="govuk-link">book a quarantine hotel package, including 2 COVID-19 tests</a></li>
+    <li><a href="#" class="govuk-link">complete a passenger locator form</a></li>
   </ul>
 
   <h3 id="on-arrival-in-england">On arrival in England</h3>
@@ -210,7 +210,7 @@
   <p>On arrival in England you must:</p>
 
   <ul>
-    <li><a href="https://www.gov.uk/guidance/booking-and-staying-in-a-quarantine-hotel-when-you-arrive-in-england" class="govuk-link">quarantine in a managed hotel, including 2 COVID-19 tests</a></li>
+    <li><a href="#" class="govuk-link">quarantine in a managed hotel, including 2 COVID-19 tests</a></li>
   </ul>
 
   <h3 id="red-list-of-countries-and-territories">Red list of countries and territories</h3>
@@ -448,7 +448,7 @@
 
   <h3 id="ireland-the-uk-the-channel-islands-and-the-isle-of-man">Ireland, the <abbr title="United Kingdom">UK</abbr>, the Channel Islands and the Isle of Man</h3>
 
-  <p>You do not need to take a COVID-19 test or quarantine on arrival in England if you are travelling within the <abbr title="United Kingdom">UK</abbr>, Ireland, the Channel Islands and the Isle of Man, (the <a href="https://www.gov.uk/government/publications/common-travel-area-guidance/common-travel-area-guidance" class="govuk-link">Common Travel Area</a>), and you have not been outside of the Common Travel Area in the previous 10 days.</p>
+  <p>You do not need to take a COVID-19 test or quarantine on arrival in England if you are travelling within the <abbr title="United Kingdom">UK</abbr>, Ireland, the Channel Islands and the Isle of Man, (the <a href="#" class="govuk-link">Common Travel Area</a>), and you have not been outside of the Common Travel Area in the previous 10 days.</p>
 
   <h2 id="amber-list">Amber list countries and territories</h2>
 
@@ -463,10 +463,10 @@
   <p>Before you travel to England you must:</p>
 
   <ul>
-    <li><a href="https://www.gov.uk/guidance/coronavirus-covid-19-testing-for-people-travelling-to-england" class="govuk-link">take a COVID-19 test</a></li>
+    <li><a href="#" class="govuk-link">take a COVID-19 test</a></li>
     <li>
-  <a href="https://www.gov.uk/find-travel-test-provider" class="govuk-link">book and pay for day 2 and day 8 COVID-19 travel tests</a> – to be taken after arrival in England</li>
-    <li><a href="https://www.gov.uk/provide-journey-contact-details-before-travel-uk" class="govuk-link">complete a passenger locator form</a></li>
+  <a href="#" class="govuk-link">book and pay for day 2 and day 8 COVID-19 travel tests</a> – to be taken after arrival in England</li>
+    <li><a href="#" class="govuk-link">complete a passenger locator form</a></li>
   </ul>
 
   <h3 id="on-arrival-in-england-1">On arrival in England</h3>
@@ -478,11 +478,11 @@
     <li>take a COVID-19 test on or before day 2 and on or after day 8</li>
   </ul>
 
-  <p>Read about <a href="https://www.gov.uk/guidance/how-to-quarantine-when-you-arrive-in-england" class="govuk-link">quarantine and taking COVID-19 tests</a>.</p>
+  <p>Read about <a href="#" class="govuk-link">quarantine and taking COVID-19 tests</a>.</p>
 
   <p>Children aged 4 and under do not need to take the day 2 or day 8 test.</p>
 
-  <p>You may be able to end quarantine early if you pay for a private COVID-19 test through the <a href="https://www.gov.uk/guidance/coronavirus-covid-19-test-to-release-for-international-travel" class="govuk-link">Test to Release scheme</a>.</p>
+  <p>You may be able to end quarantine early if you pay for a private COVID-19 test through the <a href="#" class="govuk-link">Test to Release scheme</a>.</p>
 
   <h3 id="if-you-have-been-in-a-country-or-territory-on-the-red-list">If you have been in a country or territory on the red list</h3>
 
@@ -1207,7 +1207,7 @@
 
   <h3 id="ireland-the-uk-the-channel-islands-and-the-isle-of-man-1">Ireland, the <abbr title="United Kingdom">UK</abbr>, the Channel Islands and the Isle of Man</h3>
 
-  <p>You do not need to take a COVID-19 test or quarantine on arrival in England if you are travelling within the <abbr title="United Kingdom">UK</abbr>, Ireland, the Channel Islands and the Isle of Man, (the <a href="https://www.gov.uk/government/publications/common-travel-area-guidance/common-travel-area-guidance" class="govuk-link">Common Travel Area</a>), and you have not been outside of the Common Travel Area in the previous 10 days.</p>
+  <p>You do not need to take a COVID-19 test or quarantine on arrival in England if you are travelling within the <abbr title="United Kingdom">UK</abbr>, Ireland, the Channel Islands and the Isle of Man, (the <a href="#" class="govuk-link">Common Travel Area</a>), and you have not been outside of the Common Travel Area in the previous 10 days.</p>
 
   <h2 id="green-list">Green list countries and territories</h2>
 
@@ -1222,21 +1222,21 @@
   <p>Before you travel to England you must:</p>
 
   <ul>
-    <li><a href="https://www.gov.uk/guidance/coronavirus-covid-19-testing-for-people-travelling-to-england" class="govuk-link">take a COVID-19 test</a></li>
+    <li><a href="#" class="govuk-link">take a COVID-19 test</a></li>
     <li>
-  <a rel="external" href="https://www.find-travel-test-provider.service.gov.uk/test-type/green" class="govuk-link">book and pay for a day 2 COVID-19 test</a> – to be taken after arrival in England</li>
-    <li><a href="https://www.gov.uk/provide-journey-contact-details-before-travel-uk" class="govuk-link">complete a passenger locator form</a></li>
+  <a rel="external" href="#" class="govuk-link">book and pay for a day 2 COVID-19 test</a> – to be taken after arrival in England</li>
+    <li><a href="#" class="govuk-link">complete a passenger locator form</a></li>
   </ul>
 
   <h3 id="on-arrival-in-england-2">On arrival in England</h3>
 
-  <p>You must <a rel="external" href="https://www.find-travel-test-provider.service.gov.uk/test-type/green" class="govuk-link">take a COVID-19 test</a> on or before day 2 after you arrive.</p>
+  <p>You must <a rel="external" href="#" class="govuk-link">take a COVID-19 test</a> on or before day 2 after you arrive.</p>
 
   <p>Children aged 4 and under do not need to take this test.</p>
 
   <p>You do not need to quarantine unless the test result is positive.</p>
 
-  <p>You must <a rel="external" href="https://www.nhs.uk/conditions/coronavirus-covid-19/self-isolation-and-treatment/if-youre-told-to-self-isolate-by-nhs-test-and-trace-or-the-covid-19-app" class="govuk-link">quarantine</a> if <abbr title="National Health Service">NHS</abbr> Test &amp; Trace informs you that you travelled to England with someone who has tested positive for COVID-19.</p>
+  <p>You must <a rel="external" href="#" class="govuk-link">quarantine</a> if <abbr title="National Health Service">NHS</abbr> Test &amp; Trace informs you that you travelled to England with someone who has tested positive for COVID-19.</p>
 
   <h3 id="if-you-have-been-in-a-country-or-territory-on-the-red-or-amber-list">If you have been in a country or territory on the red or amber list</h3>
 
@@ -1285,7 +1285,7 @@
         <td>Moved to green list from amber list 4am, 17 May. If you arrived in England before then, you need to <a href="#amber-list" class="govuk-link">follow the amber list rules</a>.</td>
       </tr>
       <tr>
-        <th scope="row">  Israel and <a href="https://www.gov.uk/world/organisations/british-consulate-general-jerusalem#uk-position-on-jerusalem" class="govuk-link">Jerusalem</a>
+        <th scope="row">  Israel and <a href="#" class="govuk-link">Jerusalem</a>
   </th>
         <td>Moved to green list from amber list 4am, 17 May. If you arrived in England before then, you need to <a href="#amber-list" class="govuk-link">follow the amber list rules</a>.</td>
       </tr>
@@ -1314,7 +1314,7 @@
 
   <h2 id="ireland-the-uk-the-channel-islands-and-the-isle-of-man-2">Ireland, the <abbr title="United Kingdom">UK</abbr>, the Channel Islands and the Isle of Man</h2>
 
-  <p>You do not need to take a COVID-19 test or quarantine on arrival in England if you are travelling within the <abbr title="United Kingdom">UK</abbr>, Ireland, the Channel Islands and the Isle of Man, (the <a href="https://www.gov.uk/government/publications/common-travel-area-guidance/common-travel-area-guidance" class="govuk-link">Common Travel Area</a>), and you have not been outside of the Common Travel Area in the previous 10 days.</p>
+  <p>You do not need to take a COVID-19 test or quarantine on arrival in England if you are travelling within the <abbr title="United Kingdom">UK</abbr>, Ireland, the Channel Islands and the Isle of Man, (the <a href="#" class="govuk-link">Common Travel Area</a>), and you have not been outside of the Common Travel Area in the previous 10 days.</p>
 
   <h2 id="transit-stops-in-amber-or-red-list-countries">Transit stops in amber or red list countries</h2>
 
@@ -1341,19 +1341,19 @@
 
   <p>If you are travelling to England in a private vehicle, the rules of the countries and territories you drive through apply. For example, if you drive through an amber list country, then you must follow the <a href="#amber-list" class="govuk-link">amber list rules</a> when you arrive in England.</p>
 
-  <p>This applies whether you stop in the country or territory or not. You need to record the countries and territories you drive through on your <a href="https://www.gov.uk/provide-journey-contact-details-before-travel-uk" class="govuk-link">passenger locator form</a>.</p>
+  <p>This applies whether you stop in the country or territory or not. You need to record the countries and territories you drive through on your <a href="#" class="govuk-link">passenger locator form</a>.</p>
 
   <h3 id="transiting-through-airports-in-england">Transiting through airports in England</h3>
 
-  <p>See what you need to do if you are <a href="https://www.gov.uk/guidance/coronavirus-covid-19-safer-air-travel-guidance-for-passengers#transiting-through-the-uk" class="govuk-link">transiting ‘landside’ or transiting ‘airside’ through England</a>.</p>
+  <p>See what you need to do if you are <a href="#" class="govuk-link">transiting ‘landside’ or transiting ‘airside’ through England</a>.</p>
 
   <h2 id="job-and-medical-exemptions">Job and medical exemptions</h2>
 
   <p>Some people are exempt from some or all of the requirements:</p>
 
   <ul>
-    <li><a href="https://www.gov.uk/government/publications/coronavirus-covid-19-travellers-exempt-from-uk-border-rules/coronavirus-covid-19-travellers-exempt-from-uk-border-rules" class="govuk-link">because of the job they do</a></li>
-    <li><a href="https://www.gov.uk/guidance/exemptions-from-managed-quarantine-for-medical-and-compassionate-reasons" class="govuk-link">for medical or compassionate reasons</a></li>
+    <li><a href="#" class="govuk-link">because of the job they do</a></li>
+    <li><a href="#" class="govuk-link">for medical or compassionate reasons</a></li>
   </ul>
 
   <h2 id="travelling-abroad-from-england">Travelling abroad from England</h2>
@@ -1371,10 +1371,10 @@
   <p>Find out:</p>
 
   <ul>
-    <li>about demonstrating your <a href="https://www.gov.uk/guidance/demonstrating-your-covid-19-vaccination-status-when-travelling-abroad" class="govuk-link"><abbr title="National Health Service">NHS</abbr> COVID-19 vaccination status</a> using the <a rel="external" href="https://www.nhs.uk/nhs-services/online-services/nhs-app" class="govuk-link"><abbr title="National Health Service">NHS</abbr> App</a>, <a rel="external" href="https://www.nhs.uk/conditions/coronavirus-covid-19/coronavirus-vaccination/vaccination-status-for-travelling-abroad/" class="govuk-link"><abbr title="National Health Service">NHS</abbr> website</a> or <a href="https://www.gov.uk/government/publications/covid-19-vaccination-status-what-your-confirmation-letter-tells-you" class="govuk-link">letter</a>
+    <li>about demonstrating your <a href="#" class="govuk-link">letter</a>
   </li>
-    <li>if the <a href="https://www.gov.uk/foreign-travel-advice" class="govuk-link">countries or territories</a> you are travelling to accept proof of COVID-19 vaccination status as part of their entry requirements</li>
-    <li>how to prove your COVID-19 vaccination status if you are a resident of <a rel="external" href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-international-travel-advice" class="govuk-link">Northern Ireland</a>, <a rel="external" href="https://www.gov.scot/publications/coronavirus-covid-19-international-travel-quarantine" class="govuk-link">Scotland</a> or <a rel="external" href="https://gov.wales/arriving-wales-overseas" class="govuk-link">Wales</a>
+    <li>if the <a href="#" class="govuk-link">countries or territories</a> you are travelling to accept proof of COVID-19 vaccination status as part of their entry requirements</li>
+    <li>how to prove your COVID-19 vaccination status if you are a resident of <a rel="external" href="#" class="govuk-link">Wales</a>
   </li>
   </ul>
 
@@ -1385,8 +1385,8 @@
   <p>Foreign, Commonwealth &amp; Development Office (<abbr title="Foreign, Commonwealth &amp; Development Office">FCDO</abbr>) travel advice continues to advise against all non-essential travel to some countries and territories. Many other countries have rules in place about who can enter and what you can do when you are there. These rules are not related to which colour list that country is on. Before you travel, you should read:</p>
 
   <ul>
-    <li><a href="https://www.gov.uk/guidance/travel-advice-novel-coronavirus" class="govuk-link">guidance on travelling abroad during the coronavirus pandemic</a></li>
-    <li><a href="https://www.gov.uk/foreign-travel-advice" class="govuk-link"><abbr title="Foreign, Commonwealth &amp; Development Office">FCDO</abbr> travel advice for the countries you will visit</a></li>
+    <li><a href="#" class="govuk-link">guidance on travelling abroad during the coronavirus pandemic</a></li>
+    <li><a href="#" class="govuk-link"><abbr title="Foreign, Commonwealth &amp; Development Office">FCDO</abbr> travel advice for the countries you will visit</a></li>
   </ul>
 
   </div>
@@ -1475,7 +1475,7 @@
         <div class="gem-c-step-nav-related gem-c-step-nav-related--singular" data-module="gem-track-click">
       <h2 class="gem-c-step-nav-related__heading">
         <span class="gem-c-step-nav-related__pretitle">Part of</span>
-            <a href="/travel-abroad" class="govuk-link" data-track-category="stepNavPartOfClicked" data-track-action="Part of" data-track-label="/travel-abroad" data-track-dimension="Travel abroad: step by step" data-track-dimension-index="29" data-track-options="{&quot;dimension96&quot; : &quot;8c0c7b83-5e0b-4bed-9121-1c394e2f96f3&quot; }">
+            <a href="#" class="govuk-link" data-track-category="stepNavPartOfClicked" data-track-action="Part of" data-track-label="/travel-abroad" data-track-dimension="Travel abroad: step by step" data-track-dimension-index="29" data-track-options="{&quot;dimension96&quot; : &quot;8c0c7b83-5e0b-4bed-9121-1c394e2f96f3&quot; }">
               Travel abroad: step by step
             </a>
           </h2>
@@ -1501,23 +1501,23 @@
   </h3>          </div>
 
             <div class="gem-c-step-nav__panel js-panel" id="step-panel-plan-your-trip-1">
-                <ol class="gem-c-step-nav__list " data-length="1"><li class="gem-c-step-nav__list-item js-list-item "><a data-position="1.1" class="gem-c-step-nav__link js-link" href="/foreign-travel-advice?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">Check foreign travel advice for the country you're travelling to or transiting through </a></li></ol>
+                <ol class="gem-c-step-nav__list " data-length="1"><li class="gem-c-step-nav__list-item js-list-item "><a data-position="1.1" class="gem-c-step-nav__link js-link" href="#">Check foreign travel advice for the country you're travelling to or transiting through </a></li></ol>
 
                 <p class="gem-c-step-nav__paragraph">Find out what you need to do if you're travelling during coronavirus (COVID-19).</p>
 
                 <ol class="gem-c-step-nav__list " data-length="4">
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="1.2" class="gem-c-step-nav__link js-link" href="/guidance/travel-advice-novel-coronavirus?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">Check the latest COVID-19 travel restrictions </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="1.2" class="gem-c-step-nav__link js-link" href="#">Check the latest COVID-19 travel restrictions </a></li>
   <li class="gem-c-step-nav__list-item js-list-item gem-c-step-nav__list-item--active"><a data-position="1.3" class="gem-c-step-nav__link js-link" href="#content"><span class="gem-c-step-nav__link-active-context visuallyhidden">You are currently viewing: </span>Check what you need to do if you're travelling to England from a country or territory on the red, amber and green list </a></li>
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="1.4" class="gem-c-step-nav__link js-link" href="/foreign-travel-advice?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">Check if you need a negative test result or to demonstrate your COVID-19 vaccination status to enter your destination, or if you need to quarantine upon arrival </a></li>
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="1.5" class="gem-c-step-nav__link js-link" href="/government/publications/list-of-private-providers-of-coronavirus-testing?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">Get a COVID-19 test through a private provider in the UK, if you need one </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="1.4" class="gem-c-step-nav__link js-link" href="#">Check if you need a negative test result or to demonstrate your COVID-19 vaccination status to enter your destination, or if you need to quarantine upon arrival </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="1.5" class="gem-c-step-nav__link js-link" href="#">Get a COVID-19 test through a private provider in the UK, if you need one </a></li>
   </ol>
 
                 <p class="gem-c-step-nav__paragraph">Find out what you need to do:</p>
 
                 <ul class="gem-c-step-nav__list gem-c-step-nav__list--choice" data-length="3">
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="1.6" class="gem-c-step-nav__link js-link" href="/drive-abroad?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">to drive abroad </a></li>
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="1.7" class="gem-c-step-nav__link js-link" href="/government/publications/disabled-travellers?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">if you're disabled </a></li>
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="1.8" class="gem-c-step-nav__link js-link" href="/taking-your-pet-abroad?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">to take your pet dog, cat or ferret abroad </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="1.6" class="gem-c-step-nav__link js-link" href="#">to drive abroad </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="1.7" class="gem-c-step-nav__link js-link" href="#">if you're disabled </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="1.8" class="gem-c-step-nav__link js-link" href="#">to take your pet dog, cat or ferret abroad </a></li>
   </ul>
 
             </div>
@@ -1543,14 +1543,14 @@
                 <p class="gem-c-step-nav__paragraph">How much time you need on your passport depends on the country you're visiting. Check the entry requirements for the country you want to travel to.</p>
 
                 <ol class="gem-c-step-nav__list " data-length="3">
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="2.1" class="gem-c-step-nav__link js-link" href="/foreign-travel-advice?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">Check your passport has enough time left on it for the country you're visiting </a></li>
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="2.2" class="gem-c-step-nav__link js-link" href="/renew-adult-passport?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">Renew or replace your passport  </a></li>
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="2.3" class="gem-c-step-nav__link js-link" href="/get-a-child-passport?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">Get a passport for your child </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="2.1" class="gem-c-step-nav__link js-link" href="#">Check your passport has enough time left on it for the country you're visiting </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="2.2" class="gem-c-step-nav__link js-link" href="#">Renew or replace your passport  </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="2.3" class="gem-c-step-nav__link js-link" href="#">Get a passport for your child </a></li>
   </ol>
 
                 <p class="gem-c-step-nav__paragraph">You may also need a visa to enter some countries.</p>
 
-                <ol class="gem-c-step-nav__list " data-length="1"><li class="gem-c-step-nav__list-item js-list-item "><a data-position="2.4" class="gem-c-step-nav__link js-link" href="/foreign-travel-advice?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">Check if you need a visa or permit </a></li></ol>
+                <ol class="gem-c-step-nav__list " data-length="1"><li class="gem-c-step-nav__list-item js-list-item "><a data-position="2.4" class="gem-c-step-nav__link js-link" href="#">Check if you need a visa or permit </a></li></ol>
 
             </div>
 
@@ -1573,9 +1573,9 @@
 
             <div class="gem-c-step-nav__panel js-panel js-hidden" id="step-panel-get-travel-insurance-and-check-if-you-need-vaccinations-or-inoculations-3">
                 <ol class="gem-c-step-nav__list " data-length="3">
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="3.1" class="gem-c-step-nav__link js-link" href="/guidance/foreign-travel-insurance?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">Get travel insurance </a></li>
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="3.2" class="gem-c-step-nav__link js-link" href="/guidance/demonstrating-your-covid-19-vaccination-status-when-travelling-abroad?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">Get ready to demonstrate your COVID-19 vaccination status </a></li>
-  <li class="gem-c-step-nav__list-item js-list-item "><a rel="external" data-position="3.3" class="gem-c-step-nav__link js-link" href="https://travelhealthpro.org.uk/">Check what vaccinations or inoculations you may need on the TravelHealthPro website </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="3.1" class="gem-c-step-nav__link js-link" href="#">Get travel insurance </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="3.2" class="gem-c-step-nav__link js-link" href="#">Get ready to demonstrate your COVID-19 vaccination status </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a rel="external" data-position="3.3" class="gem-c-step-nav__link js-link" href="#">Check what vaccinations or inoculations you may need on the TravelHealthPro website </a></li>
   </ol>
 
             </div>
@@ -1599,9 +1599,9 @@
 
             <div class="gem-c-step-nav__panel js-panel js-hidden" id="step-panel-travel-safely-and-check-for-travel-disruption-4">
                 <ol class="gem-c-step-nav__list " data-length="3">
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="4.1" class="gem-c-step-nav__link js-link" href="/guidance/coronavirus-covid-19-safer-travel-guidance-for-passengers?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">Find out how to travel safely in the UK during coronavirus (COVID-19) </a></li>
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="4.2" class="gem-c-step-nav__link js-link" href="/guidance/coronavirus-covid-19-safer-air-travel-guidance-for-passengers?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">Check guidance for safer air travel during COVID-19 </a></li>
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="4.3" class="gem-c-step-nav__link js-link" href="/guidance/travel-advice-novel-coronavirus?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">Check if there are travel disruptions because of COVID-19 </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="4.1" class="gem-c-step-nav__link js-link" href="#">Find out how to travel safely in the UK during coronavirus (COVID-19) </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="4.2" class="gem-c-step-nav__link js-link" href="#">Check guidance for safer air travel during COVID-19 </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="4.3" class="gem-c-step-nav__link js-link" href="#">Check if there are travel disruptions because of COVID-19 </a></li>
   </ol>
 
             </div>
@@ -1626,7 +1626,7 @@
             <div class="gem-c-step-nav__panel js-panel js-hidden" id="step-panel-going-through-border-control-5">
                 <p class="gem-c-step-nav__paragraph">You may need to show paperwork such as your passport or visa. You may also need a negative coronavirus (COVID-19) test result or demonstrate your COVID-19 vaccination status at the point of entry.</p>
 
-                <ol class="gem-c-step-nav__list " data-length="1"><li class="gem-c-step-nav__list-item js-list-item "><a data-position="5.1" class="gem-c-step-nav__link js-link" href="/foreign-travel-advice?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">Check the entry requirements for the country you are travelling to or transiting through </a></li></ol>
+                <ol class="gem-c-step-nav__list " data-length="1"><li class="gem-c-step-nav__list-item js-list-item "><a data-position="5.1" class="gem-c-step-nav__link js-link" href="#">Check the entry requirements for the country you are travelling to or transiting through </a></li></ol>
 
             </div>
 
@@ -1648,16 +1648,16 @@
   </h3>          </div>
 
             <div class="gem-c-step-nav__panel js-panel js-hidden" id="step-panel-when-you-are-abroad-6">
-                <ol class="gem-c-step-nav__list " data-length="1"><li class="gem-c-step-nav__list-item js-list-item "><a data-position="6.1" class="gem-c-step-nav__link js-link" href="/foreign-travel-advice?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">Follow the local coronavirus (COVID-19) restrictions </a></li></ol>
+                <ol class="gem-c-step-nav__list " data-length="1"><li class="gem-c-step-nav__list-item js-list-item "><a data-position="6.1" class="gem-c-step-nav__link js-link" href="#">Follow the local coronavirus (COVID-19) restrictions </a></li></ol>
 
                 <p class="gem-c-step-nav__paragraph">Find out what to do if: </p>
 
                 <ul class="gem-c-step-nav__list gem-c-step-nav__list--choice" data-length="5">
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="6.2" class="gem-c-step-nav__link js-link" href="/guidance/coronavirus-covid-19-staying-where-you-are-if-you-cannot-return-to-the-uk?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">you're unable to return to the UK because of COVID-19 </a></li>
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="6.3" class="gem-c-step-nav__link js-link" href="/guidance/uk-residents-visiting-the-eueea-and-switzerland-healthcare?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">you need to access healthcare in the EU </a></li>
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="6.4" class="gem-c-step-nav__link js-link" href="/guidance/how-to-deal-with-a-crisis-overseas?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">you're in a crisis abroad </a></li>
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="6.5" class="gem-c-step-nav__link js-link" href="/help-if-you-are-arrested-abroad?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">you're arrested abroad </a></li>
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="6.6" class="gem-c-step-nav__link js-link" href="/victim-crime-abroad?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">you're a victim of a crime abroad </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="6.2" class="gem-c-step-nav__link js-link" href="#">you're unable to return to the UK because of COVID-19 </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="6.3" class="gem-c-step-nav__link js-link" href="#">you need to access healthcare in the EU </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="6.4" class="gem-c-step-nav__link js-link" href="#">you're in a crisis abroad </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="6.5" class="gem-c-step-nav__link js-link" href="#">you're arrested abroad </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="6.6" class="gem-c-step-nav__link js-link" href="#">you're a victim of a crime abroad </a></li>
   </ul>
 
             </div>
@@ -1683,9 +1683,9 @@
                 <p class="gem-c-step-nav__paragraph">There are different coronavirus (COVID-19) rules if you're:</p>
 
                 <ul class="gem-c-step-nav__list gem-c-step-nav__list--choice" data-length="3">
-  <li class="gem-c-step-nav__list-item js-list-item "><a rel="external" data-position="7.1" class="gem-c-step-nav__link js-link" href="https://www.gov.scot/publications/coronavirus-covid-19-international-travel-quarantine/">entering Scotland </a></li>
-  <li class="gem-c-step-nav__list-item js-list-item "><a rel="external" data-position="7.2" class="gem-c-step-nav__link js-link" href="https://gov.wales/arriving-wales-overseas">entering Wales </a></li>
-  <li class="gem-c-step-nav__list-item js-list-item "><a rel="external" data-position="7.3" class="gem-c-step-nav__link js-link" href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-international-travel-advice">entering Northern Ireland </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a rel="external" data-position="7.1" class="gem-c-step-nav__link js-link" href="#">entering Scotland </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a rel="external" data-position="7.2" class="gem-c-step-nav__link js-link" href="#">entering Wales </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a rel="external" data-position="7.3" class="gem-c-step-nav__link js-link" href="#">entering Northern Ireland </a></li>
   </ul>
 
                 <p class="gem-c-step-nav__paragraph">If you’re entering England, there are different rules depending on if you’ve travelled from a country or territory on the:</p>
@@ -1699,16 +1699,16 @@
                 <ol class="gem-c-step-nav__list " data-length="1"><li class="gem-c-step-nav__list-item js-list-item"><a data-position="7.7" class="gem-c-step-nav__link js-link" href="#content">Check what you need to do if you're travelling to England from a country or territory on the red, amber and green list </a></li></ol>
 
                 <ol class="gem-c-step-nav__list " data-length="3">
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="7.8" class="gem-c-step-nav__link js-link" href="/guidance/coronavirus-covid-19-testing-for-people-travelling-to-england?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">Get a private test before you return to England (pre-departure test) </a></li>
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="7.9" class="gem-c-step-nav__link js-link" href="/provide-journey-contact-details-before-travel-uk?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">Complete a passenger locator form </a></li>
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="7.10" class="gem-c-step-nav__link js-link" href="/uk-border-control?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">Follow the rules for entering the UK </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="7.8" class="gem-c-step-nav__link js-link" href="#">Get a private test before you return to England (pre-departure test) </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="7.9" class="gem-c-step-nav__link js-link" href="#">Complete a passenger locator form </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="7.10" class="gem-c-step-nav__link js-link" href="#">Follow the rules for entering the UK </a></li>
   </ol>
 
                 <p class="gem-c-step-nav__paragraph">Check if you want to:</p>
 
                 <ul class="gem-c-step-nav__list gem-c-step-nav__list--choice" data-length="2">
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="7.11" class="gem-c-step-nav__link js-link" href="/duty-free-goods?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">bring goods into the UK </a></li>
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="7.12" class="gem-c-step-nav__link js-link" href="/guidance/personal-food-plant-and-animal-product-imports?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">bring food, plants or animal products into the UK for personal use </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="7.11" class="gem-c-step-nav__link js-link" href="#">bring goods into the UK </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="7.12" class="gem-c-step-nav__link js-link" href="#">bring food, plants or animal products into the UK for personal use </a></li>
   </ul>
 
             </div>
@@ -1732,8 +1732,8 @@
 
             <div class="gem-c-step-nav__panel js-panel js-hidden" id="step-panel-when-you-arrive-in-the-uk-8">
                 <ol class="gem-c-step-nav__list " data-length="2">
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="8.1" class="gem-c-step-nav__link js-link" href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">Follow the latest coronavirus restrictions </a></li>
-  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="8.2" class="gem-c-step-nav__link js-link" href="/duty-free-goods?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3">Declare goods and pay tax and duty to UK customs </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="8.1" class="gem-c-step-nav__link js-link" href="#">Follow the latest coronavirus restrictions </a></li>
+  <li class="gem-c-step-nav__list-item js-list-item "><a data-position="8.2" class="gem-c-step-nav__link js-link" href="#">Declare goods and pay tax and duty to UK customs </a></li>
   </ol>
 
             </div>
