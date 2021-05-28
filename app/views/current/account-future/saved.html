@@ -3,6 +3,8 @@
 
 {% block account %}
 
+<!-- START SUCCESS PANEL -  we're being a bit hacky in showing one-time alerts - we might be able to do this with javascript? -->
+
 {% if data['success']  %}
 
 {% set html %}
@@ -26,7 +28,7 @@ You’ve removed ‘Red, amber and green list rules for entering England’ from
 }) }}
 
 {% endif %}
-
+<!-- END SUCCESS PANEL -->
 
 
 <h1 class="gem-c-heading govuk-heading-l   govuk-!-margin-bottom-4">Your saved pages</h1>

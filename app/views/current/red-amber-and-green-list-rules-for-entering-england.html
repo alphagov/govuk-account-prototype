@@ -21,7 +21,8 @@
       {% block beforeContent %}
 
 <br><br>
-      <!-- we're being a bit hacky in showing one-time alerts - we might be able to do this with javascript? -->
+<!-- START SUCCESS PANEL -  we're being a bit hacky in showing one-time alerts - we might be able to do this with javascript? -->
+
             {% if data['success']  %}
 
             {% set html %}
@@ -46,6 +47,9 @@
             }) }}
 
             {% endif %}
+
+      <!-- END SUCCESS PANEL -->
+
 
       <h2 class="gem-c-step-nav-header govuk-!-margin-bottom-0" data-module="gem-track-click">
           <span class="gem-c-step-nav-header__part-of govuk-heading-s govuk-!-margin-bottom-0">Part of</span>
@@ -1446,7 +1450,7 @@
 
   <div class="gem-c-contextual-sidebar">
 
-    <!-- SAVE BLOCK -->
+    <!-- START SAVE A PAGE PANEL -->
 
       <div class="accounts-panel">
           <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">
@@ -1470,7 +1474,7 @@
           </p>
           </div>
 
-          <!-- END SAVE BLOCK -->
+          <!-- END SAVE A PAGE PANEL -->
 
         <div class="gem-c-step-nav-related gem-c-step-nav-related--singular" data-module="gem-track-click">
       <h2 class="gem-c-step-nav-related__heading">
