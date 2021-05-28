@@ -8,6 +8,17 @@
   GOV.UK Accounts prototype
 {% endblock %}
 
+{% block beforeContent %}
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "#"
+    }
+  ]
+}) }}
+{% endblock %}
+
 {% block content %}
 
 
@@ -16,6 +27,9 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+
+
+
       <h1 class="govuk-heading-xl">
         You need a GOV.UK account to save a page
           </h1>

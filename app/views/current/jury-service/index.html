@@ -1,5 +1,22 @@
 {% extends "layout.html" %}
 {% set serviceName = "" %}
+
+{% set pageArray = [
+  { title: "How jury service works", url: "index" },
+  { title: "What you can claim if you’re an employee", url: "what-you-can-claim-if-youre-an-employee"},
+  { title: "What you can claim if you’re self-employed", url: "what-you-can-claim-if-youre-self-employed"},
+  { title: "What you can claim if you're not working", url: "what-you-can-claim-if-youre-not-working"},
+  { title: "Ask to change the date or be excused", url: "delaying-or-being-excused-from-jury-service"},
+  { title: "Respond to the summons", url: "respond-to-the-summons"},
+  { title: "Going to court as a juror", url: "what-to-take-to-court"},
+  { title: "Discussing the trial", url: "discussing-the-trial"},
+  {title: "How to claim expenses", url: "how-to-claim-expenses"}
+]
+%}
+
+{% if not pageNumber %}{% set pageNumber = 1 %}{% endif %}
+
+
 {% if not guideTitle %} {% set guideTitle = "How jury service works" %}{% endif %}
 {% block header %}
   {# Set serviceName in config.js. #}
@@ -12,18 +29,6 @@
 
 
 
-  {% set pageArray = [
-    { title: "How jury service works", url: "index" },
-    { title: "What you can claim if you’re an employee", url: "what-you-can-claim-if-youre-an-employee"},
-    { title: "What you can claim if you’re self-employed", url: "what-you-can-claim-if-youre-self-employed"},
-    { title: "What you can claim if you're not working", url: "what-you-can-claim-if-youre-not-working"},
-    { title: "Ask to change the date or be excused", url: "delaying-or-being-excused-from-jury-service"},
-    { title: "Respond to the summons", url: "respond-to-the-summons"},
-    { title: "Going to court as a juror", url: "what-to-take-to-court"},
-    { title: "Discussing the trial", url: "discussing-the-trial"},
-    { title: "bar", url: ""}
-  ]
-%}
 
 {% endblock %}
 
@@ -83,10 +88,29 @@
 
             {{ govukNotificationBanner({
               html: html,
-              type: 'success'
+              type: 'success',
+              classes: 'govuk-!-margin-bottom-4 govuk-!-margin-top-0'
             }) }}
 
             {% endif %}
+
+            {{ govukBreadcrumbs({
+              items: [
+                {
+                  text: "Home",
+                  href: "#"
+                },
+                {
+                  text: "Crime, justice and the law",
+                  href: "#"
+                },
+                {
+                  text: "Courts, sentencing and tribunals",
+                  href: "#"
+                }
+              ]
+            }) }}
+
 
       {% endblock %}
       <main class="govuk-main-wrapper {{ mainClasses }} guide" style="padding-top: 0" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
@@ -96,22 +120,7 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    {{ govukBreadcrumbs({
-      items: [
-        {
-          text: "Home",
-          href: "#"
-        },
-        {
-          text: "Crime, justice and the law",
-          href: "#"
-        },
-        {
-          text: "Courts, sentencing and tribunals",
-          href: "#"
-        }
-      ]
-    }) }}
+
 
     <div class="gem-c-title govuk-!-margin-top-8 govuk-!-margin-bottom-8">
 
@@ -257,7 +266,7 @@
 <ul class="gem-c-pagination__list" data-module="gem-track-click">
   {% if not (guideTitle == "How jury service works") %}
 <li class="gem-c-pagination__item gem-c-pagination__item--previous">
-  <a href="jury-service" class="govuk-link gem-c-pagination__link" rel="prev" data-track-category="contentsClicked" data-track-action="previous" data-track-label="/jury-service" data-track-dimension="previous" data-track-dimension-index="29">
+  <a href={% for i in pageArray%}{% if loop.index == (pageNumber - 1) %}"{{i.url}}?success="{% endif %}{% endfor %}  class="govuk-link gem-c-pagination__link" rel="prev" data-track-category="contentsClicked" data-track-action="previous" data-track-label="/jury-service" data-track-dimension="previous" data-track-dimension-index="29">
     <span class="gem-c-pagination__link-title">
       <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
         <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
@@ -267,12 +276,12 @@
       </span>
     </span>
       <span class="gem-c-pagination__link-divider visually-hidden">:</span>
-      <span class="gem-c-pagination__link-label">How jury service works</span>
+      <span class="gem-c-pagination__link-label">{% for i in pageArray%}{% if loop.index == (pageNumber - 1) %}{{i.title}}{% endif %}{% endfor %} </span>
   </a>
 </li>{% endif %}
   {% if not (guideTitle == "How to claim expenses") %}
 <li class="gem-c-pagination__item gem-c-pagination__item--next">
-  <a href="what-you-can-claim-if-youre-self-employed" class="govuk-link gem-c-pagination__link" rel="next" data-track-category="contentsClicked" data-track-action="next" data-track-label="/jury-service/what-you-can-claim-if-youre-self-employed" data-track-dimension="next" data-track-dimension-index="29">
+  <a href={% for i in pageArray%}{% if loop.index == (pageNumber + 1) %}"{{i.url}}?success="{% endif %}{% endfor %} class="govuk-link gem-c-pagination__link" rel="next" data-track-category="contentsClicked" data-track-action="next" data-track-label="/jury-service/what-you-can-claim-if-youre-self-employed" data-track-dimension="next" data-track-dimension-index="29">
     <span class="gem-c-pagination__link-title">
       <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
         <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
@@ -282,7 +291,7 @@
       </span>
     </span>
       <span class="gem-c-pagination__link-divider visually-hidden">:</span>
-      <span class="gem-c-pagination__link-label">What you can claim if you’re self-employed</span>
+      <span class="gem-c-pagination__link-label">{% for i in pageArray%}{% if loop.index == (pageNumber + 1) %}{{i.title}}{% endif %}{% endfor %}</span>
   </a>
 </li>{% endif %}
 </ul>
