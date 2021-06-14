@@ -54,18 +54,10 @@
   <ul class="govuk-list govuk-list--bullet">
     <li><a href="/{{folder}}/new-account/index">Email and password</a></li>
     <li><a href="/{{folder}}/new-account/your-information">Your information</a></li>
-    <li><a href="/{{folder}}/new-account/confirmation-sent">Email confirmation</a></li>
+    <li><a href="/{{folder}}/account/manage-pages">Manage pages</a> - option to add and remove pages</li>
+
   </ul>
 
-  <p>Continue back to red/amber/green page.</p>
-
-
-  <p>GOV.UK account: <p>
-  <ul class="govuk-list govuk-list--bullet">
-    <li><a href="/{{folder}}/sign-in">Sign in</a></li>
-    <li><a href="/{{folder}}/account/index">Home</a> - includes different text for no saved pages vs some saved pages</li>
-    <li><a href="/{{folder}}/account/saved">Saved pages</a> - option to add and remove pages</li>
-  </ul>
 
 
     <!--   <li><a href="/{{folder}}/account-future/index">Future version of home page</a></li>
@@ -93,7 +85,7 @@
 
 {{ govukButton({
   text: "Start task 3",
-  href: "/" + folder + "/jury-service/index",
+  href: "/" + folder + "/jury-service/index?success=",
   classes: "govuk-button--secondary"
 }) }}
 
@@ -105,6 +97,8 @@
     </summary>
     <div class="govuk-details__text">
 
+      <li><a href="/{{folder}}/jury-service/index">Jury service page index (8 pages in total)</a></li>
+      <li><a href="/{{folder}}/account/manage-pages">Manage pages (future version)</a> - option to add and remove pages</li>
 
 
       <!--   <li><a href="/{{folder}}/account-future/index">Future version of home page</a></li>

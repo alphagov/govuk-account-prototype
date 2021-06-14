@@ -4,12 +4,12 @@
 
 {% block future %}
 
-
+{% if (data['save'] or data['notification'])%}
 {{ manageItem(title="Jury service", url="jury-service/index",
 description="What to do if you're asked to do jury service - taking time off work, delaying jury service, claiming expenses.",
 updated="16 March 2020",
 added="12 October 2021",
 notifications="",
 fragment="", saved="")   }}
-
+{% endif %}
 {% endblock %}

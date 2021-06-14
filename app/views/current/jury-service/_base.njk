@@ -241,38 +241,10 @@ This is where the guide content goes
 <div class="gem-c-contextual-sidebar">
 
 
-  <!-- START SAVE A PAGE PANEL -->
-<!--
-  <div class="accounts-panel govuk-!-margin-bottom-6">
-      <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">
-  {% if data['saved'] %}
-  You’ve saved this page
-  {% else %}
-        Save this page so you can come back to it later
-  {% endif %}
-      </h2>
-
-      <a href="{% if data['saved']%}{{current}}?success=removed&saved={% elseif data['signed-in'] %}{{current}}?success=added&saved=true{% else %}/current/save-1{%endif %}" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        {% if data['saved']%}Remove from{% else %}Add to{% endif %} your saved pages
-      </a>
-
-
-
-      <p class="govuk-body govuk-!-margin-0">
-      {% if data['signed-in'] %}
-    <a href="/{{folder}}/account/manage-pages?">Go to your account to see your saved pages</a>
-      {% else %}
-        <a href="/{{folder}}/sign-in" class="govuk-link">Sign in</a> to see your saved pages
-      {% endif %}
-      </p>
-      </div>
-  -->
-  <!-- END SAVE A PAGE PANEL -->
-
 
   {% from folder + "/manage-page.njk" import managePage  with context %}
 
-  {{managePage(saved=data['saved'], notification="", signedIn=data['signed-in'])}}
+  {{managePage(saved=data['save'], notification=data['notification'], saveFragment="save", notificationFragment="notification", signedIn=true)}}
 
 
 
