@@ -1364,3 +1364,148 @@ border-top: 1px solid #b1b4b6;
     text-decoration: none;
 }
 }
+
+// govuk home-top
+
+.home .home {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: "nta", Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  font-size: 160%;
+  color: #fff;
+  vertical-align: baseline;
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-right: -15px;
+  margin-left: -15px;
+
+}
+
+.home-top {
+    overflow: hidden;
+    background: #1d70b8;
+    color: #fff ;
+}
+
+.home-top--inner {
+  -webkit-text-size-adjust: 100%;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+line-height: 1.5;
+font-weight: 400;
+-webkit-font-smoothing: antialiased;
+font-size: 160%;
+color: #fff !important;
+vertical-align: baseline;
+border: none;
+margin: 0;
+padding: 0;
+max-width: 960px;
+position: relative;
+}
+
+.home-top--links {
+  -webkit-text-size-adjust: 100%;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+font-family: "nta", Arial, sans-serif;
+line-height: 1.5;
+font-weight: 400;
+-webkit-font-smoothing: antialiased;
+font-size: 160%;
+color: #fff;
+vertical-align: baseline;
+border: none;
+margin: 0;
+position: relative;
+z-index: 1;
+margin-top: 5px;
+padding: 15px 20px 20px 20px;
+background: #0b0c0c;
+}
+.gem-c-title--inverse {
+    color: #fff;
+}
+
+
+
+
+.home-top__intro {
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    margin: 0;
+}
+
+@media (min-width: 40.0625em){
+.home-top__intro {
+    font-size: 19px;
+    line-height: 1.3157894737;
+}}
+
+.home-top__links-link:link, .home-top__links-link:visited {
+    color: #fff;
+}
+
+.home .govuk-header__container {
+/*  margin-bottom: -10px;
+  border-bottom: 10px solid black; */
+}
+.invert-text {
+  color: #fff !important;
+}
+
+@media (min-width: 40.0625em){
+.home-top__links {
+    position: relative;
+    z-index: 1;
+    margin-top: 5px;
+    padding: 15px 20px 20px 20px;
+    background: #0b0c0c;
+}}
+
+.global-bar {
+
+-webkit-text-size-adjust: 100%;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+color: #0b0c0c;
+vertical-align: baseline;
+border: none;
+margin: 0;
+padding: 0;
+font-family: "nta",arial,sans-serif;
+-webkit-font-smoothing: antialiased;
+font-weight: 400;
+background-color: #0b0c0c;
+border-top: 10px solid #1d70b8;
+border-bottom: 1px solid #fff;
+margin-top: -10px;
+font-size: 19px;
+line-height: 1.3157894737;
+display: block;}
+
+
+.gem-c-action-link--simple-light:before {
+    width: 30px;
+    height: 30px;
+    background: url(/public/images/action-link-arrow--simple-light.png);
+    background-repeat: no-repeat;
+    background-size: 25px auto;
+    background-position: 0 2px;
+}
+
+.gem-c-action-link:before {
+    content: "";
+    display: table-cell;
+    width: 60px;
+    height: 45px;
+    background: url(/public/images/action-link-arrow--simple-light.png);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: 45px auto;
+}

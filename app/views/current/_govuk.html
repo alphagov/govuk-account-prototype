@@ -3,7 +3,7 @@
 {% block header %}
 
 
-<header class="govuk-header " role="banner" data-module="govuk-header">
+<header class="govuk-header {% if home %}home{% endif %}" role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-width-container">
     <div class="govuk-header__logo">
       <a href="/{{folder}}/index?success= " class="govuk-header__link govuk-header__link--homepage">
@@ -69,7 +69,7 @@
 
                 <a class="govuk-header__link arrow manage-explore-menu" href="#4">
 
-                Manage this page
+                Manage your pages
 
                 </a>
 
@@ -157,6 +157,8 @@ border-bottom: 5px solid #1d70b8;
         </div>
         </div>
 </header>
+
+{% block homeExtra %}{% endblock %}
 
 
 {% endblock %}

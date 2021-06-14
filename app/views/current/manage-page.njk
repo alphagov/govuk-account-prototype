@@ -6,6 +6,8 @@
 Manage this page
     </h2>
 
+    {% if saved or notification %}<p>This is saved to your pages</p>{% endif %}
+
 
 <ul class="govuk-list">
   <li>
@@ -16,7 +18,7 @@ Manage this page
   <rect x="13.7144" y="10.5" width="5" height="1" fill="#1D70B8"/>
   <rect x="15.7144" y="8.5" width="1" height="5" fill="#1D70B8"/>
   </svg>
-<a class="govuk-link" href={% if signedIn%}?success=true{% else %}#{% endif %}>
+<a class="govuk-link" href={% if signedIn%}{{currentURL}}?success=true{% else %}#{% endif %}>
 
 
 
@@ -25,7 +27,7 @@ Manage this page
   <li>
 
 
-    <a class="govuk-link" href="save-1">
+    <a class="govuk-link" href="/{{folder}}/{% if saved or notification %}account/manage-pages{% else %}save-1{% endif %}">
 
     <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M9.35605 1.13333C6.57939 1.13333 4.32874 3.32609 4.25778 6.04641L4.25737 6.06209L3.54584 14.7794L2.41626 14.6872L3.12527 6.0008C3.22088 2.66557 5.97864 0 9.35605 0C12.7328 0 15.4902 2.66454 15.5868 5.99888L16.2958 14.6872L15.1663 14.7794L14.4547 6.06036L14.4543 6.04477C14.3825 3.32521 12.1321 1.13333 9.35605 1.13333Z" fill="#1D70B8"/>
@@ -34,7 +36,7 @@ Manage this page
     </svg>
 
 
-  {% if notification %}Stop getting notifications about this page{% else %}Get notifications about this page{% endif %}</a>
+  {% if notification %}Manage notifications about this page{% else %}Get notifications about this page{% endif %}</a>
   </li>
   <li>
   <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">

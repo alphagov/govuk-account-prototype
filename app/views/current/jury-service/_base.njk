@@ -37,14 +37,14 @@ Jury service : {% for i in pageArray%}{% if loop.index == pageNumber %}{{i.title
             {% set html %}
               <h3 class="govuk-notification-banner__heading">
       {% if data['success'] == "removed" %}
-      You’ve removed this from your saved pages
+      You've removed this from your pages.
       {% else %}
-                You’ve added this to your saved pages
+              You’ve saved this to your pages.
       {% endif %}
 
               </h3>
-              <p class="govuk-body"><a class="govuk-notification-banner__link" href="/{{folder}}/account/index?success=">
-                Go to your account to see your saved pages</a></p>
+              <p class="govuk-body"><a class="govuk-notification-banner__link" href="/{{folder}}/account/manage-pages-future?success=">
+              Manage your pages</a></p>
             {% endset %}
 
             {{ govukNotificationBanner({
@@ -270,7 +270,7 @@ This is where the guide content goes
   <!-- END SAVE A PAGE PANEL -->
 
 
-  {% from folder + "/manage-page.njk" import managePage  %}
+  {% from folder + "/manage-page.njk" import managePage  with context %}
 
   {{managePage(saved=data['saved'], notification="", signedIn=data['signed-in'])}}
 

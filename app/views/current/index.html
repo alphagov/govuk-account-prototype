@@ -79,7 +79,11 @@
 
 
 <h2 class="govuk-heading-m">Task 2</h2>
-<p>No links</p>
+{{ govukButton({
+  text: "Start task 2",
+  href: "/" + folder + "/home",
+  classes: "govuk-button--secondary"
+}) }}
 
 <h2 class="govuk-heading-m">Task 3</h2>
 
