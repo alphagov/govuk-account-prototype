@@ -25,20 +25,6 @@
 Jury service : {% for i in pageArray%}{% if loop.index == pageNumber %}{{i.title}}{% endif %}{% endfor %}
 {% endblock %}
 
-{% block header %}
-  {# Set serviceName in config.js. #}
-  {{ govukHeader({
-    homepageUrl: "/" + folder + "/index?success=",
-    serviceName: "",
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container"
-  }) }}
-
-
-
-
-{% endblock %}
-
 {% block main %}
     <div class="govuk-width-container {{ containerClasses }}  " >
       {% block beforeContent %}
