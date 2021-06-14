@@ -1,0 +1,48 @@
+{% extends folder + "/_accounts.njk" %}
+
+
+{% block account %}
+
+<section class="user-reminder govuk-!-margin-bottom-4" aria-label="Notice" role="region">
+    <p class="govuk-body govuk-!-margin-0">
+      <strong>Confirm your email address</strong> to finish setting up your account.
+      <a href="/account/confirmation/new" class="govuk-link">Resend confirmation email</a>
+    </p>
+  </section>
+
+  <section class="user-reminder" aria-label="Notice" role="region">
+    <p class="govuk-body govuk-!-margin-0">
+      <p style="margin-bottom: 0"><a href="#">Add your mobile phone number</a> to keep your personal information secure.
+    </p>
+  </section>
+
+<h1 class="gem-c-heading govuk-heading-l   govuk-!-margin-bottom-4">Your GOV.UK account</h1>
+<p>{{ data['email'] | default("test.user@gmail.com") }}</p>
+
+
+<div class="accounts-panel">
+    <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Your saved pages</h2>
+
+{% if data['saved']%}
+
+    <p class="govuk-body">See and manage the list of GOV.UK pages you’ve saved.</p>
+
+    <p class="govuk-body govuk-!-margin-0">
+      <a href="saved?success=" class="govuk-link">Go to your saved pages</a>
+    </p>
+{% else %}
+
+<p class="govuk-body">
+You do not have any saved pages yet.
+</p>
+<p class="govuk-body">
+Use the ‘save a page’ button on any GOV.UK page to add it to your list of saved pages.
+</p>
+{% endif %}
+
+    </div>
+
+<br>
+<br>
+
+  {% endblock %}
