@@ -256,6 +256,7 @@ This is where the guide content goes
 
 
   <!-- START SAVE A PAGE PANEL -->
+<!--
   <div class="accounts-panel govuk-!-margin-bottom-6">
       <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">
   {% if data['saved'] %}
@@ -273,13 +274,20 @@ This is where the guide content goes
 
       <p class="govuk-body govuk-!-margin-0">
       {% if data['signed-in'] %}
-    <a href="/{{folder}}/account/index?">Go to your account to see your saved pages</a>
+    <a href="/{{folder}}/account/manage-pages?">Go to your account to see your saved pages</a>
       {% else %}
         <a href="/{{folder}}/sign-in" class="govuk-link">Sign in</a> to see your saved pages
       {% endif %}
       </p>
       </div>
+  -->
   <!-- END SAVE A PAGE PANEL -->
+
+
+  {% from folder + "/manage-page.njk" import managePage  %}
+
+  {{managePage(saved=data['saved'], notification="", signedIn=data['signed-in'])}}
+
 
 
   <div class="gem-c-related-navigation">

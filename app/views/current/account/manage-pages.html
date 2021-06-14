@@ -1,0 +1,85 @@
+{% extends folder + "/_accounts.njk" %}
+
+
+{% block account %}
+
+<!-- START SUCCESS PANEL -  we're being a bit hacky in showing one-time alerts - we might be able to do this with javascript? -->
+
+{% if data['success']  %}
+
+{% set html %}
+  <h3 class="govuk-notification-banner__heading">
+{% if data['success'] == "removed" %}
+You’ve removed ‘Red, amber and green list rules for entering England’ from your saved pages
+{% else %}
+    You’ve subscribed to notifications about ‘Red, amber and green list rules for entering England’.
+    {% endif %}
+
+  </h3>
+  {% if data['success'] == "removed" %}
+  <p class="govuk-body">
+    <a class="govuk-notification-banner__link" href="{{current}}?success=added&saved-travel=true">Add it to your saved pages again </a></p>
+{% endif %}
+{% endset %}
+
+{{ govukNotificationBanner({
+  html: html,
+  type: 'success'
+}) }}
+
+{% endif %}
+<!-- END SUCCESS PANEL -->
+
+
+<h1 class="gem-c-heading govuk-heading-l   govuk-!-margin-bottom-4">Manage your pages</h1>
+
+{% if data['saved-travel'] %}
+<ul class="govuk-list govuk-list--spaced accounts-border-list">
+      <li class="accounts-border-list__item">
+
+
+  <h3 class="gem-c-heading govuk-heading-s  govuk-!-margin-bottom-2">
+    <a href="/{{folder}}/red-amber-and-green-list-rules-for-entering-england?success=">
+      Red, amber and green list rules for entering England</a></h3>
+
+<P>Countries rated as red, amber or green for Coronavirus (COVID-19) and the rules you must follow to enter England.</p>
+      <p class="govuk-body " style="color: #505a5f">
+          This page was last updated on 16 March 2020
+      </p>
+
+  <p class="govuk-body govuk-!-margin-bottom-0">
+      You added this to your pages on 5 March 2021<br>
+      You subscribed to get notifications about this page on 5 March 2021.
+  </p>
+
+
+
+  <p><a href="{{current}}?saved-travel=&success=removed">Remove from your saved pages</a></p>
+</li>
+
+  </ul>
+
+  <ul class="govuk-list">
+  <li style="display:inline; margin-right: 10px">
+  <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0516 0L18.7144 7.35282L11.0516 14.7056V10.7382C8.85336 10.7459 7.07193 10.8101 5.58348 11.2404C4.01732 11.6932 2.76489 12.5567 1.74048 14.2769L0.714355 16V14.0154C0.714355 9.66472 2.47249 7.10292 4.77502 5.65467C6.82346 4.36624 9.23907 3.99909 11.0516 3.93608V0ZM12.1501 2.54472V4.9776L11.6029 4.97963C9.83768 4.98618 7.37937 5.27691 5.37723 6.53622C3.72815 7.57346 2.33314 9.3022 1.9301 12.2215C2.87754 11.2191 3.98503 10.6017 5.26657 10.2312C7.05944 9.71284 9.18078 9.6838 11.6007 9.68327L12.1501 9.68315V12.1609L17.1608 7.35282L12.1501 2.54472Z" fill="#1D70B8"/>
+  </svg>
+
+
+    <a class="govuk-link" href="#">Share this page
+</a>
+  </li>
+  <li style="display:inline;">
+    <a class="govuk-link" href="#">
+    <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7144 12.5V9.5H4.71436V12.5L4.71436 16.5H11.7144L11.7144 12.5ZM12.7144 17.5V12.5H15.7144V6.5H12.7144V0.5H8.21436H7.21436L3.71436 4V5V6.5H0.714355V12.5H3.71436L3.71436 17.5H12.7144ZM8.21436 1.5L11.7144 1.5V6.5H4.71436V5H8.21436V1.5ZM10.7144 15.5V14.5H5.71436V15.5H10.7144ZM10.7144 12.5V13.5H5.71436V12.5H10.7144ZM10.7144 10.5H5.71436V11.5H10.7144V10.5Z" fill="#1D70B8"/>
+    </svg>
+
+
+    Print this page</a>
+  </li>
+  </ul>
+{% endif %}
+
+
+  {% endblock %}

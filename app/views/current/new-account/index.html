@@ -10,6 +10,24 @@
   <h1 class="gem-c-heading govuk-heading-xl   govuk-!-margin-bottom-3">Create a GOV.UK account</h1>
 
 
+  <p>
+    Create an account so you can manage the GOV.UK pages you’re interested in. You can:
+
+  <ul class="govuk-list govuk-list--bullet"><li>
+  subscribe to notifications about specific pages
+  </li><li>
+  save and organise pages you visit regularly
+  </li><li>
+  share pages you think someone else might be interested in
+  </li></ul>
+  </p>
+
+
+
+
+  {{ govukInsetText({
+    html: 'You cannot use this to sign in to <a href="#">Government Gateway</a>, <a href="#">Universal Credit</a> or other government accounts.'
+  }) }}
 
 <div class="govuk-form-group">
 
@@ -93,7 +111,8 @@
 
 </form>
 <p class="govuk-body">
-  <a class="govuk-link" href="/{{folder}}/sign-in">Sign in</a> if you already have a GOV.UK account.
+  If you already have an account,
+  <a class="govuk-link" href="/{{folder}}/sign-in">sign in to manage your pages</a>.
 </p>
 
 <!--

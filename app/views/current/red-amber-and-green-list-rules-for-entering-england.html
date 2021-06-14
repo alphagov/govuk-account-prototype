@@ -30,12 +30,12 @@
       {% if data['success'] == "removed" %}
       You’ve removed this from your saved pages
       {% else %}
-                You’ve added this to your saved pages
+                You’ve saved this to your pages
       {% endif %}
 
               </h3>
-              <p class="govuk-body"><a class="govuk-notification-banner__link" href="/{{folder}}/account-future/index?success=">
-                Go to your account to see your saved pages
+              <p class="govuk-body"><a class="govuk-notification-banner__link" href="/{{folder}}/account/manage-pages?success=">
+                Manage your pages
               </a></p>
             {% endset %}
 
@@ -134,10 +134,7 @@
         Contents
   </h2>
       <ol class="gem-c-contents-list__list">
-          <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-            <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 1" data-track-label="#stay-up-to-date" data-track-options="{&quot;dimension29&quot;:&quot;Stay up-to-date&quot;}" href="#stay-up-to-date">Stay up-to-date</a>
 
-          </li>
           <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
             <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 2" data-track-label="#red-list" data-track-options="{&quot;dimension29&quot;:&quot;Red list countries and territories&quot;}" href="#red-list">Red list countries and territories</a>
 
@@ -179,11 +176,7 @@
   <div class="gem-c-govspeak govuk-govspeak " data-module="govspeak">
 
           <div class="govspeak">
-  <div class="call-to-action">
-  <h2 id="stay-up-to-date">Stay up-to-date</h2>
 
-  <p>Countries and territories can be moved between lists if conditions change. <a href="#" class="govuk-link">Sign up for an email alert</a> to be notified when this page is updated.</p>
-  </div>
 
   <p>What you must do when you arrive in England from abroad depends on where you have been in the 10 days before you arrive.</p>
 
@@ -1451,7 +1444,7 @@
   <div class="gem-c-contextual-sidebar">
 
     <!-- START SAVE A PAGE PANEL -->
-
+<!--
       <div class="accounts-panel">
           <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">
       {% if data['saved-travel'] %}
@@ -1473,8 +1466,14 @@
 
           </p>
           </div>
-
+-->
           <!-- END SAVE A PAGE PANEL -->
+
+
+
+{% from folder + "/manage-page.njk" import managePage  %}
+
+{{managePage(saved=data['saved-travel'], notification=data['saved-travel'], signedIn=data['signed-in'])}}
 
         <div class="gem-c-step-nav-related gem-c-step-nav-related--singular" data-module="gem-track-click">
       <h2 class="gem-c-step-nav-related__heading">

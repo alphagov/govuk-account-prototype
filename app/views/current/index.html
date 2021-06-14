@@ -23,46 +23,58 @@
 
 <h2 class="govuk-heading-m">Task 1</h2>
 
+
 {{ govukButton({
   text: "Start task 1",
-  href: "/" + folder + "/jury-service/index",
+  href: "/" + folder + "/red-amber-and-green-list-rules-for-entering-england",
   classes: "govuk-button--secondary"
 }) }}
 
-  <details class="govuk-details" data-module="govuk-details">
-    <summary class="govuk-details__summary">
-      <span class="govuk-details__summary-text">
-       Task 1 links if there is a problem
-      </span>
-    </summary>
-    <div class="govuk-details__text">
 
-      <p>GOV.UK screens:</p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="/{{folder}}/jury-service/index">Jury service page index (8 pages in total)</a></li>
-        <li>Save a page interstitial: <ul>
-            <li><a href="/{{folder}}/save-1">Save a page is an experimental new feature</a></li>
-            <li><a href="/{{folder}}/save-2">You need a GOV.UK account</a></li></ul>
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+     Task 1 links if there is a problem
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+
+    <ul class="govuk-list govuk-list--bullet">
+
+        <li><a href="/{{folder}}/red-amber-and-green-list-rules-for-entering-england">Red, amber and green list rules for entering England
+    </a></li>
+
+    <li>Save a page interstitial: <ul>
+        <li><a href="/{{folder}}/save-1">Save a page is an experimental new feature</a></li>
+
       </ul>
+  </ul>
 
-      <p>Register:</p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="/{{folder}}/new-account/index">Email and password</a></li>
-        <li><a href="/{{folder}}/new-account/your-information">Your information</a></li>
-        <li><a href="/{{folder}}/new-account/confirmation-sent">Email confirmation</a></li>
-      </ul>
+  <p>Register:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a href="/{{folder}}/new-account/index">Email and password</a></li>
+    <li><a href="/{{folder}}/new-account/your-information">Your information</a></li>
+    <li><a href="/{{folder}}/new-account/confirmation-sent">Email confirmation</a></li>
+  </ul>
 
-      <p>Continue back to Jury service page.</p>
+  <p>Continue back to red/amber/green page.</p>
 
-      <p>GOV.UK account: <p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="/{{folder}}/sign-in">Sign in</a></li>
-        <li><a href="/{{folder}}/account/index">Home</a> - includes different text for no saved pages vs some saved pages</li>
-        <li><a href="/{{folder}}/new-account/saved">Saved pages</a> - option to add and remove pages</li>
-      </ul>
 
-        </div>
-  </details>
+  <p>GOV.UK account: <p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a href="/{{folder}}/sign-in">Sign in</a></li>
+    <li><a href="/{{folder}}/account/index">Home</a> - includes different text for no saved pages vs some saved pages</li>
+    <li><a href="/{{folder}}/account/saved">Saved pages</a> - option to add and remove pages</li>
+  </ul>
+
+
+    <!--   <li><a href="/{{folder}}/account-future/index">Future version of home page</a></li>
+        <li><a href="/{{folder}}/account-future/saved">Future version of saved pages</a> - for simplicity of journey, jury service can't be deleted</li>
+-->
+
+
+      </div>
+</details>
 
 
 
@@ -72,32 +84,31 @@
 <h2 class="govuk-heading-m">Task 3</h2>
 
 
+
+
+
 {{ govukButton({
   text: "Start task 3",
-  href: "/" + folder + "/red-amber-and-green-list-rules-for-entering-england",
+  href: "/" + folder + "/jury-service/index",
   classes: "govuk-button--secondary"
 }) }}
 
+  <details class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+       Task 3 links if there is a problem
+      </span>
+    </summary>
+    <div class="govuk-details__text">
 
-<details class="govuk-details" data-module="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-     Task 3 links if there is a problem
-    </span>
-  </summary>
-  <div class="govuk-details__text">
 
-    <ul class="govuk-list govuk-list--bullet">
 
-        <li><a href="/{{folder}}/red-amber-and-green-list-rules-for-entering-england">Red, amber and green list rules for entering England
-    </a></li>
-      <li><a href="/{{folder}}/account-future/index">Future version of home page</a></li>
-        <li><a href="/{{folder}}/account-future/saved">Future version of saved pages</a> - for simplicity of journey, jury service can't be deleted</li>
-    </ul>
+      <!--   <li><a href="/{{folder}}/account-future/index">Future version of home page</a></li>
+          <li><a href="/{{folder}}/account-future/saved">Future version of saved pages</a> - for simplicity of journey, jury service can't be deleted</li>
+  -->
 
-      </div>
-</details>
-
+        </div>
+  </details>
 
 
     </div>

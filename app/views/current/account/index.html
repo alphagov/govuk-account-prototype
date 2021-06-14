@@ -23,7 +23,7 @@
 <div class="accounts-panel">
     <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Your saved pages</h2>
 
-{% if data['saved']%}
+{% if data['saved'] or data['saved-travel']%}
 
     <p class="govuk-body">See and manage the list of GOV.UK pages you’ve saved.</p>
 
