@@ -1,18 +1,6 @@
-{% extends "layout.html" %}
+{% extends folder + "/_govuk.html" %}
 {% set serviceName = "" %}
 {% set pageTitle = "Red, amber and green list rules for entering England" %}
-{% block header %}
-  {# Set serviceName in config.js. #}
-  {{ govukHeader({
-    homepageUrl: "/" + folder + "/index?success=",
-    serviceName: "",
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container"
-  }) }}
-
-
-
-{% endblock %}
 
 {% block main %}
 

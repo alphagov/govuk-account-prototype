@@ -1,0 +1,117 @@
+
+.govuk-header__navigation {
+text-size-adjust: 100%;
+font-family: "GDS Transport", arial, sans-serif;
+-webkit-font-smoothing: antialiased;
+font-weight: 400;
+color: #ffffff;
+font-size: 1rem;
+line-height: 1.25;
+padding: 0;
+list-style: none;
+display: block;
+margin: 0 auto 0 auto;
+max-width: 960px;
+min-height: unset;
+position: absolute;
+right: 25px;
+padding-top: 0;
+}
+
+
+.xpl-topics-menu-item {
+
+  text-size-adjust: 100%;
+font-family: "GDS Transport", arial, sans-serif;
+-webkit-font-smoothing: antialiased;
+font-weight: 400;
+font-size: 1rem;
+line-height: 1.25;
+list-style: none;
+display: inline-block;
+border: none;
+color: #0b0c0c;
+padding: 20px 30px 0 20px;
+margin-right: 0;
+cursor: pointer;
+padding-right: 55px;
+}
+
+.xpl-topics-button-desktop {
+  text-size-adjust: 100%;
+list-style: none;
+background: none;
+border: 0;
+padding: 0;
+display: block;
+color: #ffffff;
+font-family: "GDS Transport", nta, Arial, sans-serif;
+-webkit-font-smoothing: antialiased;
+font-weight: 700;
+white-space: nowrap;
+position: relative;
+cursor: pointer;
+font-size: 16px;
+}
+
+@media (min-width: 48em) {
+.explore-header .xpl-nav--desktop .govuk-header__navigation-item#xpl-topics-menu-item button:after, .explore-header .xpl-nav--desktop .govuk-header__navigation-item#xpl-activity-menu-item button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: -24px;
+    width: 6px;
+    height: 6px;
+    -webkit-transform: rotate(
+137deg
+);
+    -ms-transform: rotate(137deg);
+    transform: rotate(
+137deg
+);
+    border: solid;
+    border-width: 2px 2px 0 0;
+    border-color: white;
+    clip-path: none;
+}
+}
+
+
+@media (min-width: 48em) {
+.explore-header .xpl-nav--desktop .govuk-header__navigation-item#xpl-search-menu-item button, .explore-header .xpl-nav--desktop .govuk-header__navigation-item#xpl-search-menu-item a {
+    display: block;
+    position: static;
+    right: 0;
+    width: 54px;
+    height: 54px;
+    cursor: pointer;
+    background-image: url(/public/images/magnifying-glass.png);
+    background-repeat: no-repeat;
+    background-position: 10px 11.2px;
+    background-size: 35px;
+    background-color: #1d70b8;
+    text-indent: -5000px;
+    overflow: hidden;
+}}
+
+.govuk-header__navigation-item#xpl-activity-menu-item button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: -24px;
+    width: 6px;
+    height: 6px;
+    -webkit-transform: rotate(
+137deg
+);
+    -ms-transform: rotate(137deg);
+    transform: rotate(
+137deg
+);
+    border: solid;
+    border-width: 2px 2px 0 0;
+    border-color: white;
+    clip-path: none;
+  }

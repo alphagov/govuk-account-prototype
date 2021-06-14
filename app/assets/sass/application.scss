@@ -1338,3 +1338,29 @@ border-top: 1px solid #b1b4b6;
 }
 
 // hello
+
+
+// search
+
+@media (max-width: 768px) {
+#mobile-only {
+  display: inline-block !important;
+}
+.explore-active {
+  outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #ffdd00;
+    box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+    text-decoration: none;
+}
+}
+
+@media (min-width: 768px) {
+.explore-active {
+  outline: 3px solid transparent;
+    color: #0b0c0c !important;
+    background-color: white;
+    box-shadow: 0 -2px white, 0 4px white;
+    text-decoration: none;
+}
+}
