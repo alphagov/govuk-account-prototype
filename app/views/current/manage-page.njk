@@ -6,7 +6,7 @@
 Manage this page
     </h2>
 
-    {% if saved %}<p>This is saved to your pages</p>{% endif %}
+    {% if data[saveFragment] %}<p>This is saved to your pages</p>{% endif %}
 
 
 <ul class="govuk-list">
@@ -16,16 +16,16 @@ Manage this page
 </svg>
 
 <a class="govuk-link govuk-link--no-visited-state" href=
-{% if signedIn%}?success={% if saved %}removed&{{saveFragment}}=&{{notificationFragment}}={% else %}true&{{saveFragment}}=true{% endif %}{% else %}#{% endif %}>
+{% if signedIn%}?success={% if data[saveFragment] %}removed&{{saveFragment}}=&{{notificationFragment}}={% else %}true&{{saveFragment}}=true{% endif %}{% else %}#{% endif %}>
 
 
 
-    {% if saved %}Remove from your pages{% else %}Save this page{% endif %}</a>
+    {% if data[saveFragment] %}Remove from your pages{% else %}Save this page{% endif %}</a>
   </li>
   <li>
 
 
-    <a class="govuk-link govuk-link--no-visited-state" href="/{{folder}}/{% if saved or notification %}account/manage-pages{% else %}save-1{% endif %}">
+    <a class="govuk-link govuk-link--no-visited-state" href="/{{folder}}/{% if data[saveFragment] or data[notificationFragment] %}account/manage-pages{% else %}save-1{% endif %}">
 
     <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0.649902V1.67109C11.9307 1.92049 14.2502 4.3421 14.3359 7.33241L14.9398 14.8166H17V15.9499H0V14.8166H2.0602L2.66408 7.33423C2.74886 4.34309 5.06867 1.92054 8 1.67109V0.649902H9ZM3.12525 14.8166H13.8748L13.2755 7.39065L13.2751 7.37589C13.2079 4.79975 11.1002 2.72347 8.5 2.72347C5.8993 2.72347 3.79129 4.80058 3.72482 7.37744L3.72444 7.39229L3.12525 14.8166Z" fill="#0B0C0C"/>
@@ -33,7 +33,7 @@ Manage this page
 </svg>
 
 
-  {% if notification %}Manage notifications about this page{% else %}Get notifications about this page{% endif %}</a>
+  {% if data[notificationFragment] %}Manage notifications about this page{% else %}Get notifications about this page{% endif %}</a>
   </li>
   <li>
   <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
