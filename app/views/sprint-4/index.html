@@ -1,0 +1,115 @@
+
+{% set serviceName = "" %}
+{% extends "layout.html" %}
+
+
+
+{% block pageTitle %}
+  Version for usability testing June 2021
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+      Version for usability testing June 2021
+
+      </h1>
+
+      {{ govukInsetText({
+        text: "If banners are unexpectedly showing up, clear the data (at the bottom of the screen) and start again."
+      }) }}
+
+<h2 class="govuk-heading-m">Task 1</h2>
+
+
+{{ govukButton({
+  text: "Start task 1",
+  href: "/" + folder + "/red-amber-and-green-list-rules-for-entering-england",
+  classes: "govuk-button--secondary"
+}) }}
+
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+     Task 1 links
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+
+    <ul class="govuk-list govuk-list--bullet">
+
+        <li><a href="/{{folder}}/red-amber-and-green-list-rules-for-entering-england">Red, amber and green list rules for entering England
+    </a></li>
+
+    <li>Save a page interstitial: <ul>
+        <li><a href="/{{folder}}/save-1">Save a page is an experimental new feature</a></li>
+
+      </ul>
+  </ul>
+
+  <p>Register:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a href="/{{folder}}/new-account/index">Email and password</a></li>
+    <li><a href="/{{folder}}/new-account/your-information">Your information</a></li>
+    <li><a href="/{{folder}}/account/manage-pages">Manage pages</a> - option to add and remove pages</li>
+
+  </ul>
+
+
+
+    <!--   <li><a href="/{{folder}}/account-future/index">Future version of home page</a></li>
+        <li><a href="/{{folder}}/account-future/saved">Future version of saved pages</a> - for simplicity of journey, jury service can't be deleted</li>
+-->
+
+
+      </div>
+</details>
+
+
+
+<h2 class="govuk-heading-m">Task 2</h2>
+{{ govukButton({
+  text: "Start task 2",
+  href: "/" + folder + "/home",
+  classes: "govuk-button--secondary"
+}) }}
+
+<h2 class="govuk-heading-m">Task 3</h2>
+
+
+
+
+
+{{ govukButton({
+  text: "Start task 3",
+  href: "/" + folder + "/jury-service/index?success=",
+  classes: "govuk-button--secondary"
+}) }}
+
+  <details class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+       Task 3 links
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+
+      <li><a href="/{{folder}}/jury-service/index">Jury service page index (8 pages in total)</a></li>
+      <li><a href="/{{folder}}/account/manage-pages">Manage pages (future version)</a> - option to add and remove pages</li>
+
+
+      <!--   <li><a href="/{{folder}}/account-future/index">Future version of home page</a></li>
+          <li><a href="/{{folder}}/account-future/saved">Future version of saved pages</a> - for simplicity of journey, jury service can't be deleted</li>
+  -->
+
+        </div>
+  </details>
+
+
+    </div>
+  </div>
+
+{% endblock %}

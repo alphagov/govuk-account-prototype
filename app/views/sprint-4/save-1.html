@@ -1,0 +1,77 @@
+
+
+{% extends folder + "/_govuk.html" %}
+
+{% set serviceName = "" %}
+
+{% set title = "This is an experimental new feature" %}
+
+{% block pageTitle %}
+{{title}}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "#"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+
+      <h1 class="govuk-heading-xl">
+        {{title}}
+          </h1>
+
+
+      <p>
+        We’re trying out some new tools to help you save and manage the GOV.UK pages you’re interested in.
+        </p>
+        <p> At the moment, you can:
+<ul class="govuk-list govuk-list--bullet"><li>
+subscribe to notifications about specific pages
+</li><li>
+save and organise pages you visit regularly
+</li><li>
+share pages you think someone else might be interested in
+</li></ul>
+      </p>
+<p>We will make changes to this feature as we learn more about how people are using it.
+</p>
+
+<p>
+We might also remove it entirely if not enough people find it useful. </p>
+
+{{ govukInsetText({
+  html: 'You cannot use this to sign in to <a href="#">Government Gateway</a>, <a href="#">Universal Credit</a> or other government accounts.'
+}) }}
+
+
+
+{{ govukButton({
+  text: "Create an account",
+  href: "new-account/index"
+}) }}
+
+
+
+
+<p><a href="/{{folder}}/sign-in">Sign in to manage your pages</a> if you already have an account.</p>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,157 @@
+{% extends folder + "/_accounts.njk" %}
+
+
+{% block account %}
+
+<!-- START SUCCESS PANEL -  we're being a bit hacky in showing one-time alerts - we might be able to do this with javascript? -->
+
+{% if data['success']  %}
+
+{% set html %}
+  <h3 class="govuk-notification-banner__heading">
+{% if data['success'] == "removed" %}
+You’ve removed ‘Red, amber and green list rules for entering England’ from your saved pages
+{% else %}
+    You’ve subscribed to notifications about ‘Red, amber and green list rules for entering England’.
+    {% endif %}
+
+  </h3>
+  {% if data['success'] == "removed" %}
+  <p class="govuk-body">
+    <a class="govuk-notification-banner__link" href="{{current}}?success=added&saved-travel=true">Add it to your saved pages again </a></p>
+{% endif %}
+{% endset %}
+
+{{ govukNotificationBanner({
+  html: html,
+  type: 'success'
+}) }}
+
+{% endif %}
+<!-- END SUCCESS PANEL -->
+
+
+
+<h1 class="gem-c-heading govuk-heading-l   govuk-!-margin-bottom-4">Manage your pages</h1>
+
+{{ govukSelect({
+  id: "sort",
+  name: "sort",
+  label: {
+    text: "Sort by"
+  },
+  items: [
+    {
+      value: "added",
+      text: "Recently added"
+    },
+    {
+      value: "updated",
+      text: "Recently updated",
+      selected: true
+    }
+  ]
+}) }}
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+{% macro manageItem(title="", url="", title="", description="", updated="", added="", notifications="", fragment="", saved="")   %}
+
+      <li >
+<p class="govuk-!-margin-bottom-1">
+<a href="#" class="govuk-link">        <svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 0.5H0.5V1V8V8.5H1H9H9.81477L9.44579 7.77357L7.78303 4.5L9.44579 1.22643L9.81477 0.5H9H1Z" stroke="#0B0C0C"/>
+        <line x1="0.5" y1="13" x2="0.5" y2="2" stroke="#0B0C0C"/>
+        </svg>
+ Mark this page as important</a></p>
+  <h3 class="gem-c-heading govuk-heading-m govuk-!-margin-top-0 govuk-!-margin-bottom-2">
+    <a href="/{{folder}}/{{url}}?success=">
+      {{title}}</a></h3>
+
+<P class="govuk-body-l  govuk-!-margin-bottom-1">{{description}}</p>
+      <p class="govuk-body " style="color: #505a5f">
+          This page was last updated on {{updated}}
+      </p>
+
+  <p class="govuk-body govuk-!-margin-bottom-0">
+      You added this to your pages on {{added}}.
+      {% if notifications %}
+      <br>
+      You subscribed to get notifications about this page on {{notifications}}.
+      {% endif %}
+  </p>
+
+
+
+</li>
+
+    <li style="display:inline-block; margin-right: 1em">
+
+      <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.3372 0L18 7.35282L10.3372 14.7056V10.7382C8.139 10.7459 6.35758 10.8101 4.86913 11.2404C3.30296 11.6932 2.05053 12.5567 1.02613 14.2769L0 16V14.0154C0 9.66472 1.75813 7.10292 4.06067 5.65467C6.10911 4.36624 8.52472 3.99909 10.3372 3.93608V0ZM11.4357 2.54472V4.9776L10.8886 4.97963C9.12333 4.98618 6.66501 5.27691 4.66288 6.53622C3.01379 7.57346 1.61879 9.3022 1.21574 12.2215C2.16318 11.2191 3.27067 10.6017 4.55221 10.2312C6.34509 9.71284 8.46642 9.6838 10.8863 9.68327L11.4357 9.68315V12.1609L16.4465 7.35282L11.4357 2.54472Z" fill="#0B0C0C"/>
+      </svg>
+
+
+    <a class="govuk-link" href="#">Share this page
+</a>
+  </li>
+  <li style="display:inline-block; margin-right: 1em">
+
+    <a class="govuk-link" href="#">
+      <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 16V12H15V6H12V0H6.5L3 3.5V6H0V12H3V16H12ZM4 12V15H11V12V9H4V12ZM4 8H11H12V11H14V7H12H11H4H3H1V11H3V8H4ZM4 6H11V1H7V4H4V6ZM6 2L5 3H6V2ZM10 12.5H5V13.5H10V12.5ZM5 10.5H10V11.5H5V10.5Z" fill="#0B0C0C"/>
+  </svg>
+
+
+
+    Print</a>
+  </li>
+
+
+  <li style="display:inline-block; margin-right: 1em">
+    <a class="govuk-link" href="#">
+      <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0.649902V1.67109C11.9307 1.92049 14.2502 4.3421 14.3359 7.33241L14.9398 14.8166H17V15.9499H0V14.8166H2.0602L2.66408 7.33423C2.74886 4.34309 5.06867 1.92054 8 1.67109V0.649902H9ZM3.12525 14.8166H13.8748L13.2755 7.39065L13.2751 7.37589C13.2079 4.79975 11.1002 2.72347 8.5 2.72347C5.8993 2.72347 3.79129 4.80058 3.72482 7.37744L3.72444 7.39229L3.12525 14.8166Z" fill="#0B0C0C"/>
+  <path d="M5.11854 16.8029C5.49713 18.2675 6.8267 19.3499 8.41051 19.3499C9.99432 19.3499 11.3239 18.2675 11.7025 16.8029H10.5114C10.1743 17.6322 9.36009 18.2165 8.41051 18.2165C7.46093 18.2165 6.64667 17.6322 6.30964 16.8029H5.11854Z" fill="#0B0C0C"/>
+  </svg>
+
+
+{% if notifications %}
+    Manage notifications
+{% else %}
+Get notifications
+{% endif %}
+  </a>
+  </li>
+
+  <li style="display:inline-block; margin-right: 1em">
+
+    <a class="govuk-link" href="#">
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8745 11.5815C9.82911 12.4664 8.47687 13 7 13C3.68629 13 1 10.3137 1 7C1 5.52313 1.53359 4.17089 2.41851 3.12554L10.8745 11.5815ZM11.5816 10.8744L3.12562 2.41844C4.17096 1.53356 5.52317 1 7 1C10.3137 1 13 3.68629 13 7C13 8.47683 12.4664 9.82904 11.5816 10.8744ZM14 7C14 10.866 10.866 14 7 14C3.13401 14 0 10.866 0 7C0 3.13401 3.13401 0 7 0C10.866 0 14 3.13401 14 7Z" fill="#0B0C0C"/>
+  </svg>
+<a href="{{current}}?{{fragment}}=&success=removed">Remove</a>
+</li>
+
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+
+{% endmacro %}
+
+<ul class="govuk-list govuk-list--spaced accounts-border-list">
+
+  {% block future %}
+
+  {% endblock %}
+
+{{ manageItem(title="Red, amber and green list rules for entering England", url="red-amber-and-green-list-rules-for-entering-england", description="Countries rated as red, amber or green for Coronavirus (COVID-19) and the rules you must follow to enter England.", updated="5 June 2021", added="15 June 2021", notifications="15 June 2021", fragment="", saved="")   }}
+
+
+
+
+</ul>
+
+
+  {% endblock %}

@@ -1,0 +1,60 @@
+{% macro managePage(saved="", notification="", saveFragment="", notificationFragment="", signedIn="") %}
+
+
+<div class="accounts-panel">
+    <h2 class="gem-c-heading govuk-heading-s   govuk-!-margin-bottom-4">
+Manage this page
+    </h2>
+
+    {% if data[saveFragment] %}<p>This is saved to your pages</p>{% endif %}
+
+
+<ul class="govuk-list">
+  <li>
+  <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.5H16V1.5H0V0.5ZM0 5.5H16V6.5H0V5.5ZM11 10.5H0V11.5H11V10.5ZM16 10.5H18V11.5H16V13.5H15V11.5H13V10.5H15V8.5H16V10.5Z" fill="#0B0C0C"/>
+</svg>
+
+<a class="govuk-link govuk-link--no-visited-state" href=
+{% if signedIn%}?success={% if data[saveFragment] %}removed&{{saveFragment}}=&{{notificationFragment}}={% else %}true&{{saveFragment}}=true{% endif %}{% else %}#{% endif %}>
+
+
+
+    {% if data[saveFragment] %}Remove from your pages{% else %}Save this page{% endif %}</a>
+  </li>
+  <li>
+
+
+    <a class="govuk-link govuk-link--no-visited-state" href="/{{folder}}/{% if data[saveFragment] or data[notificationFragment] %}account/manage-pages{% else %}save-1{% endif %}">
+
+    <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9 0.649902V1.67109C11.9307 1.92049 14.2502 4.3421 14.3359 7.33241L14.9398 14.8166H17V15.9499H0V14.8166H2.0602L2.66408 7.33423C2.74886 4.34309 5.06867 1.92054 8 1.67109V0.649902H9ZM3.12525 14.8166H13.8748L13.2755 7.39065L13.2751 7.37589C13.2079 4.79975 11.1002 2.72347 8.5 2.72347C5.8993 2.72347 3.79129 4.80058 3.72482 7.37744L3.72444 7.39229L3.12525 14.8166Z" fill="#0B0C0C"/>
+<path d="M5.11854 16.8029C5.49713 18.2675 6.8267 19.3499 8.41051 19.3499C9.99432 19.3499 11.3239 18.2675 11.7025 16.8029H10.5114C10.1743 17.6322 9.36009 18.2165 8.41051 18.2165C7.46093 18.2165 6.64667 17.6322 6.30964 16.8029H5.11854Z" fill="#0B0C0C"/>
+</svg>
+
+
+  {% if data[notificationFragment] %}Manage notifications about this page{% else %}Get notifications about this page{% endif %}</a>
+  </li>
+  <li>
+  <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.3372 0L18 7.35282L10.3372 14.7056V10.7382C8.139 10.7459 6.35758 10.8101 4.86913 11.2404C3.30296 11.6932 2.05053 12.5567 1.02613 14.2769L0 16V14.0154C0 9.66472 1.75813 7.10292 4.06067 5.65467C6.10911 4.36624 8.52472 3.99909 10.3372 3.93608V0ZM11.4357 2.54472V4.9776L10.8886 4.97963C9.12333 4.98618 6.66501 5.27691 4.66288 6.53622C3.01379 7.57346 1.61879 9.3022 1.21574 12.2215C2.16318 11.2191 3.27067 10.6017 4.55221 10.2312C6.34509 9.71284 8.46642 9.6838 10.8863 9.68327L11.4357 9.68315V12.1609L16.4465 7.35282L11.4357 2.54472Z" fill="#0B0C0C"/>
+  </svg>
+
+
+    <a class="govuk-link govuk-link--no-visited-state" href="#">Share this page
+</a>
+  </li>
+  <li>
+    <a class="govuk-link govuk-link--no-visited-state" href="#">
+    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 16V12H15V6H12V0H6.5L3 3.5V6H0V12H3V16H12ZM4 12V15H11V12V9H4V12ZM4 8H11H12V11H14V7H12H11H4H3H1V11H3V8H4ZM4 6H11V1H7V4H4V6ZM6 2L5 3H6V2ZM10 12.5H5V13.5H10V12.5ZM5 10.5H10V11.5H5V10.5Z" fill="#0B0C0C"/>
+</svg>
+
+    Print this page</a>
+  </li>
+</ul>
+
+
+</div>
+
+{% endmacro %}
